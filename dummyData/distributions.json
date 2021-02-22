@@ -1,0 +1,2908 @@
+{
+    "data": [
+        {
+            "name": "Amur",
+            "id": "304"
+        },
+        {
+            "name": "Andaman Is.",
+            "id": "39"
+        },
+        {
+            "name": "Andhra Pradesh",
+            "id": "516"
+        },
+        {
+            "name": "Andorra",
+            "id": "384"
+        },
+        {
+            "name": "Angola",
+            "id": "4"
+        },
+        {
+            "name": "Anguilla",
+            "id": "652"
+        },
+        {
+            "name": "Anhui",
+            "id": "482"
+        },
+        {
+            "name": "Annobón",
+            "id": "414"
+        },
+        {
+            "name": "Antarctic",
+            "id": "742"
+        },
+        {
+            "name": "Antarctica",
+            "id": "367"
+        },
+        {
+            "name": "Antarctic Continent",
+            "id": "745"
+        },
+        {
+            "name": "Antigua-Barbuda",
+            "id": "651"
+        },
+        {
+            "name": "Antipodean Is.",
+            "id": "354"
+        },
+        {
+            "name": "Antofagasta",
+            "id": "736"
+        },
+        {
+            "name": "Arabian Peninsula",
+            "id": "458"
+        },
+        {
+            "name": "Argentina Distrito Federal",
+            "id": "709"
+        },
+        {
+            "name": "Argentina Northeast",
+            "id": "169"
+        },
+        {
+            "name": "Argentina Northwest",
+            "id": "171"
+        },
+        {
+            "name": "Argentina South",
+            "id": "264"
+        },
+        {
+            "name": "Arizona",
+            "id": "164"
+        },
+        {
+            "name": "Baja California",
+            "id": "628"
+        },
+        {
+            "name": "Baja California Sur",
+            "id": "629"
+        },
+        {
+            "name": "Baleares",
+            "id": "123"
+        },
+        {
+            "name": "Bali",
+            "id": "555"
+        },
+        {
+            "name": "Baltic States",
+            "id": "276"
+        },
+        {
+            "name": "Bangladesh",
+            "id": "41"
+        },
+        {
+            "name": "Barbados",
+            "id": "666"
+        },
+        {
+            "name": "Beijing",
+            "id": "475"
+        },
+        {
+            "name": "Belarus",
+            "id": "277"
+        },
+        {
+            "name": "Belgium",
+            "id": "278"
+        },
+        {
+            "name": "Belize",
+            "id": "154"
+        },
+        {
+            "name": "Benin",
+            "id": "29"
+        },
+        {
+            "name": "Bermuda",
+            "id": "182"
+        },
+        {
+            "name": "Bhutan",
+            "id": "513"
+        },
+        {
+            "name": "Bihar",
+            "id": "517"
+        },
+        {
+            "name": "Biobio",
+            "id": "729"
+        },
+        {
+            "name": "Bioko",
+            "id": "415"
+        },
+        {
+            "name": "Bismarck Archipelago",
+            "id": "208"
+        },
+        {
+            "name": "Bolivia",
+            "id": "77"
+        },
+        {
+            "name": "Bonaire",
+            "id": "661"
+        },
+        {
+            "name": "Arkansas",
+            "id": "227"
+        },
+        {
+            "name": "Armenia",
+            "id": "448"
+        },
+        {
+            "name": "Aruba",
+            "id": "204"
+        },
+        {
+            "name": "Arunachal Pradesh",
+            "id": "512"
+        },
+        {
+            "name": "Ascension",
+            "id": "193"
+        },
+        {
+            "name": "Ashmore-Cartier Is.",
+            "id": "573"
+        },
+        {
+            "name": "Asia-Temperate",
+            "id": "433"
+        },
+        {
+            "name": "Asia-Tropical",
+            "id": "504"
+        },
+        {
+            "name": "Assam",
+            "id": "40"
+        },
+        {
+            "name": "Atacama",
+            "id": "737"
+        },
+        {
+            "name": "Australasia",
+            "id": "565"
+        },
+        {
+            "name": "Australia",
+            "id": "566"
+        },
+        {
+            "name": "Australian Capital Territory",
+            "id": "569"
+        },
+        {
+            "name": "Austria",
+            "id": "275"
+        },
+        {
+            "name": "Aves I.",
+            "id": "653"
+        },
+        {
+            "name": "Azerbaijan",
+            "id": "449"
+        },
+        {
+            "name": "Azores",
+            "id": "122"
+        },
+        {
+            "name": "Bahamas",
+            "id": "166"
+        },
+        {
+            "name": "Bahia",
+            "id": "680"
+        },
+        {
+            "name": "Bahrain",
+            "id": "459"
+        },
+        {
+            "name": "California",
+            "id": "211"
+        },
+        {
+            "name": "Cambodia",
+            "id": "43"
+        },
+        {
+            "name": "Cameroon",
+            "id": "31"
+        },
+        {
+            "name": "Campeche",
+            "id": "638"
+        },
+        {
+            "name": "Canary Is.",
+            "id": "124"
+        },
+        {
+            "name": "Cape Provinces",
+            "id": "2"
+        },
+        {
+            "name": "Cape Verde",
+            "id": "101"
+        },
+        {
+            "name": "Caprivi Strip",
+            "id": "44"
+        },
+        {
+            "name": "Caribbean",
+            "id": "648"
+        },
+        {
+            "name": "Caroline Is.",
+            "id": "207"
+        },
+        {
+            "name": "Catamarca",
+            "id": "720"
+        },
+        {
+            "name": "Caucasus",
+            "id": "437"
+        },
+        {
+            "name": "Cayman Is.",
+            "id": "177"
+        },
+        {
+            "name": "Ceara",
+            "id": "681"
+        },
+        {
+            "name": "Central African Repu",
+            "id": "32"
+        },
+        {
+            "name": "Central America",
+            "id": "644"
+        },
+        {
+            "name": "Central American Pac",
+            "id": "358"
+        },
+        {
+            "name": "Central European Rus",
+            "id": "279"
+        },
+        {
+            "name": "Chaco",
+            "id": "707"
+        },
+        {
+            "name": "Chad",
+            "id": "5"
+        },
+        {
+            "name": "Borneo",
+            "id": "185"
+        },
+        {
+            "name": "Bosnia- Herzegovina",
+            "id": "393"
+        },
+        {
+            "name": "Botswana",
+            "id": "25"
+        },
+        {
+            "name": "Bouvet I.",
+            "id": "744"
+        },
+        {
+            "name": "Brasilia Distrito Federal",
+            "id": "675"
+        },
+        {
+            "name": "Brazil",
+            "id": "674"
+        },
+        {
+            "name": "Brazil North",
+            "id": "78"
+        },
+        {
+            "name": "Brazil Northeast",
+            "id": "79"
+        },
+        {
+            "name": "Brazil South",
+            "id": "138"
+        },
+        {
+            "name": "Brazil Southeast",
+            "id": "80"
+        },
+        {
+            "name": "Brazil West-Central",
+            "id": "81"
+        },
+        {
+            "name": "British Columbia",
+            "id": "297"
+        },
+        {
+            "name": "British Virgin Is.",
+            "id": "654"
+        },
+        {
+            "name": "Brunei",
+            "id": "551"
+        },
+        {
+            "name": "Buenos Aires",
+            "id": "705"
+        },
+        {
+            "name": "Bulgaria",
+            "id": "94"
+        },
+        {
+            "name": "Burkina",
+            "id": "30"
+        },
+        {
+            "name": "Burundi",
+            "id": "42"
+        },
+        {
+            "name": "Buryatiya",
+            "id": "305"
+        },
+        {
+            "name": "Cabinda",
+            "id": "189"
+        },
+        {
+            "name": "Abkhaziya",
+            "id": "446"
+        },
+        {
+            "name": "Acre",
+            "id": "694"
+        },
+        {
+            "name": "Adzhariya",
+            "id": "447"
+        },
+        {
+            "name": "Afghanistan",
+            "id": "151"
+        },
+        {
+            "name": "Africa",
+            "id": "407"
+        },
+        {
+            "name": "Aguascalientes",
+            "id": "613"
+        },
+        {
+            "name": "Aisen",
+            "id": "739"
+        },
+        {
+            "name": "Alabama",
+            "id": "144"
+        },
+        {
+            "name": "Alagoas",
+            "id": "679"
+        },
+        {
+            "name": "Alaska",
+            "id": "325"
+        },
+        {
+            "name": "Albania",
+            "id": "93"
+        },
+        {
+            "name": "Alberta",
+            "id": "326"
+        },
+        {
+            "name": "Aldabra",
+            "id": "212"
+        },
+        {
+            "name": "Aleutian Is.",
+            "id": "356"
+        },
+        {
+            "name": "Algeria",
+            "id": "137"
+        },
+        {
+            "name": "Altay",
+            "id": "303"
+        },
+        {
+            "name": "Amapa",
+            "id": "696"
+        },
+        {
+            "name": "Amazonas",
+            "id": "695"
+        },
+        {
+            "name": "American Samoa",
+            "id": "578"
+        },
+        {
+            "name": "Amsterdam-St.Paul Is",
+            "id": "355"
+        },
+        {
+            "name": "Chagos Archipelago",
+            "id": "219"
+        },
+        {
+            "name": "Chandigarh",
+            "id": "518"
+        },
+        {
+            "name": "Channel Is.",
+            "id": "381"
+        },
+        {
+            "name": "Chatham Is.",
+            "id": "344"
+        },
+        {
+            "name": "Chechnya",
+            "id": "438"
+        },
+        {
+            "name": "Chhattisgarh",
+            "id": "519"
+        },
+        {
+            "name": "Chiapas",
+            "id": "639"
+        },
+        {
+            "name": "Chihuahua",
+            "id": "615"
+        },
+        {
+            "name": "Chile Central",
+            "id": "223"
+        },
+        {
+            "name": "Chile North",
+            "id": "246"
+        },
+        {
+            "name": "Chile South",
+            "id": "333"
+        },
+        {
+            "name": "China",
+            "id": "464"
+        },
+        {
+            "name": "China North-Central",
+            "id": "249"
+        },
+        {
+            "name": "China South-Central",
+            "id": "45"
+        },
+        {
+            "name": "China Southeast",
+            "id": "46"
+        },
+        {
+            "name": "Chita",
+            "id": "306"
+        },
+        {
+            "name": "Chongqing",
+            "id": "465"
+        },
+        {
+            "name": "Christmas I.",
+            "id": "150"
+        },
+        {
+            "name": "Chubut",
+            "id": "715"
+        },
+        {
+            "name": "Clipperton I.",
+            "id": "645"
+        },
+        {
+            "name": "Coahuila",
+            "id": "614"
+        },
+        {
+            "name": "Coco Is.",
+            "id": "547"
+        },
+        {
+            "name": "Cocos I.",
+            "id": "646"
+        },
+        {
+            "name": "Cocos (Keeling) Is.",
+            "id": "213"
+        },
+        {
+            "name": "Colima",
+            "id": "632"
+        },
+        {
+            "name": "Colombia",
+            "id": "82"
+        },
+        {
+            "name": "Colombian Caribbean Is.",
+            "id": "663"
+        },
+        {
+            "name": "Colorado",
+            "id": "298"
+        },
+        {
+            "name": "Comoros",
+            "id": "102"
+        },
+        {
+            "name": "Congo",
+            "id": "47"
+        },
+        {
+            "name": "Connecticut",
+            "id": "252"
+        },
+        {
+            "name": "Cook Is.",
+            "id": "163"
+        },
+        {
+            "name": "Coquimbo",
+            "id": "730"
+        },
+        {
+            "name": "Coral Sea Is. Territory",
+            "id": "571"
+        },
+        {
+            "name": "Cordoba",
+            "id": "706"
+        },
+        {
+            "name": "Corrientes",
+            "id": "708"
+        },
+        {
+            "name": "Corse",
+            "id": "125"
+        },
+        {
+            "name": "Costa Rica",
+            "id": "155"
+        },
+        {
+            "name": "Croatia",
+            "id": "394"
+        },
+        {
+            "name": "Crozet Is.",
+            "id": "359"
+        },
+        {
+            "name": "Hunan",
+            "id": "488"
+        },
+        {
+            "name": "Hungary",
+            "id": "285"
+        },
+        {
+            "name": "Iceland",
+            "id": "314"
+        },
+        {
+            "name": "Idaho",
+            "id": "327"
+        },
+        {
+            "name": "Illinois",
+            "id": "145"
+        },
+        {
+            "name": "India",
+            "id": "28"
+        },
+        {
+            "name": "Indiana",
+            "id": "230"
+        },
+        {
+            "name": "Indian Subcontinent",
+            "id": "505"
+        },
+        {
+            "name": "Indo-China",
+            "id": "545"
+        },
+        {
+            "name": "Ingushetiya",
+            "id": "440"
+        },
+        {
+            "name": "Inner Mongolia",
+            "id": "317"
+        },
+        {
+            "name": "Iowa",
+            "id": "231"
+        },
+        {
+            "name": "Iran",
+            "id": "11"
+        },
+        {
+            "name": "Iraq",
+            "id": "108"
+        },
+        {
+            "name": "Ireland",
+            "id": "286"
+        },
+        {
+            "name": "Irian Jaya",
+            "id": "562"
+        },
+        {
+            "name": "Irkutsk",
+            "id": "307"
+        },
+        {
+            "name": "Israel",
+            "id": "457"
+        },
+        {
+            "name": "Italy",
+            "id": "119"
+        },
+        {
+            "name": "Ivory Coast",
+            "id": "35"
+        },
+        {
+            "name": "Easter Is.",
+            "id": "342"
+        },
+        {
+            "name": "Eastern Asia",
+            "id": "497"
+        },
+        {
+            "name": "Eastern Canada",
+            "id": "598"
+        },
+        {
+            "name": "Eastern Cape Province",
+            "id": "422"
+        },
+        {
+            "name": "Eastern Europe",
+            "id": "400"
+        },
+        {
+            "name": "East European Russia",
+            "id": "281"
+        },
+        {
+            "name": "East Himalaya",
+            "id": "48"
+        },
+        {
+            "name": "East Timor",
+            "id": "556"
+        },
+        {
+            "name": "East Tropical Africa",
+            "id": "419"
+        },
+        {
+            "name": "Ecuador",
+            "id": "83"
+        },
+        {
+            "name": "Egypt",
+            "id": "7"
+        },
+        {
+            "name": "El Salvador",
+            "id": "84"
+        },
+        {
+            "name": "Entre Rios",
+            "id": "710"
+        },
+        {
+            "name": "Equatorial Guinea",
+            "id": "49"
+        },
+        {
+            "name": "Eritrea",
+            "id": "8"
+        },
+        {
+            "name": "Espirito Santo",
+            "id": "689"
+        },
+        {
+            "name": "Estonia",
+            "id": "401"
+        },
+        {
+            "name": "Ethiopia",
+            "id": "9"
+        },
+        {
+            "name": "Europe",
+            "id": "369"
+        },
+        {
+            "name": "Falkland Is.",
+            "id": "345"
+        },
+        {
+            "name": "Goa",
+            "id": "524"
+        },
+        {
+            "name": "Goias",
+            "id": "676"
+        },
+        {
+            "name": "Great Britain",
+            "id": "127"
+        },
+        {
+            "name": "Greece",
+            "id": "95"
+        },
+        {
+            "name": "Greenland",
+            "id": "360"
+        },
+        {
+            "name": "Grenada",
+            "id": "668"
+        },
+        {
+            "name": "Gruziya",
+            "id": "450"
+        },
+        {
+            "name": "Guadalupe I.",
+            "id": "625"
+        },
+        {
+            "name": "Guadeloupe",
+            "id": "655"
+        },
+        {
+            "name": "Guam",
+            "id": "589"
+        },
+        {
+            "name": "Guanajuato",
+            "id": "617"
+        },
+        {
+            "name": "Guangdong",
+            "id": "484"
+        },
+        {
+            "name": "Guangxi",
+            "id": "485"
+        },
+        {
+            "name": "Guatemala",
+            "id": "156"
+        },
+        {
+            "name": "Guerrero",
+            "id": "633"
+        },
+        {
+            "name": "Guinea",
+            "id": "51"
+        },
+        {
+            "name": "Guinea-Bissau",
+            "id": "52"
+        },
+        {
+            "name": "Guizhou",
+            "id": "466"
+        },
+        {
+            "name": "Gujarat",
+            "id": "525"
+        },
+        {
+            "name": "Gulf of Guinea Is.",
+            "id": "53"
+        },
+        {
+            "name": "Fernando de Noronha",
+            "id": "682"
+        },
+        {
+            "name": "Fiji",
+            "id": "176"
+        },
+        {
+            "name": "Finland",
+            "id": "282"
+        },
+        {
+            "name": "Florida",
+            "id": "85"
+        },
+        {
+            "name": "Formosa",
+            "id": "711"
+        },
+        {
+            "name": "Føroyar",
+            "id": "283"
+        },
+        {
+            "name": "France",
+            "id": "126"
+        },
+        {
+            "name": "Free State",
+            "id": "90"
+        },
+        {
+            "name": "French Guiana",
+            "id": "86"
+        },
+        {
+            "name": "Fujian",
+            "id": "483"
+        },
+        {
+            "name": "Gabon",
+            "id": "50"
+        },
+        {
+            "name": "Galápagos",
+            "id": "178"
+        },
+        {
+            "name": "Gambia",
+            "id": "33"
+        },
+        {
+            "name": "Gansu",
+            "id": "476"
+        },
+        {
+            "name": "Gauteng",
+            "id": "425"
+        },
+        {
+            "name": "Georgia",
+            "id": "191"
+        },
+        {
+            "name": "Germany",
+            "id": "284"
+        },
+        {
+            "name": "Ghana",
+            "id": "34"
+        },
+        {
+            "name": "Gibraltar",
+            "id": "385"
+        },
+        {
+            "name": "Gilbert Is.",
+            "id": "198"
+        },
+        {
+            "name": "Karnataka",
+            "id": "530"
+        },
+        {
+            "name": "Kazakhstan",
+            "id": "267"
+        },
+        {
+            "name": "Kazan-retto",
+            "id": "349"
+        },
+        {
+            "name": "Kentucky",
+            "id": "146"
+        },
+        {
+            "name": "Kenya",
+            "id": "12"
+        },
+        {
+            "name": "Kerala",
+            "id": "528"
+        },
+        {
+            "name": "Kerguelen",
+            "id": "352"
+        },
+        {
+            "name": "Kermadec Is.",
+            "id": "343"
+        },
+        {
+            "name": "Khabarovsk",
+            "id": "319"
+        },
+        {
+            "name": "Kin-Men",
+            "id": "491"
+        },
+        {
+            "name": "Kirgizstan",
+            "id": "308"
+        },
+        {
+            "name": "Kiribati Line Is.",
+            "id": "584"
+        },
+        {
+            "name": "Korea",
+            "id": "226"
+        },
+        {
+            "name": "Kosovo",
+            "id": "395"
+        },
+        {
+            "name": "Krasnodar",
+            "id": "443"
+        },
+        {
+            "name": "Krasnoyarsk",
+            "id": "309"
+        },
+        {
+            "name": "Kriti",
+            "id": "128"
+        },
+        {
+            "name": "Krym",
+            "id": "268"
+        },
+        {
+            "name": "Kuril Is.",
+            "id": "320"
+        },
+        {
+            "name": "Kuwait",
+            "id": "336"
+        },
+        {
+            "name": "Mpumalanga",
+            "id": "426"
+        },
+        {
+            "name": "Myanmar",
+            "id": "59"
+        },
+        {
+            "name": "Nagaland",
+            "id": "510"
+        },
+        {
+            "name": "Nagorno Karabakh",
+            "id": "452"
+        },
+        {
+            "name": "Nakhichevan",
+            "id": "451"
+        },
+        {
+            "name": "Namibia",
+            "id": "3"
+        },
+        {
+            "name": "Nansei-shoto",
+            "id": "203"
+        },
+        {
+            "name": "Nauru",
+            "id": "181"
+        },
+        {
+            "name": "Navassa I.",
+            "id": "650"
+        },
+        {
+            "name": "Nayarit",
+            "id": "636"
+        },
+        {
+            "name": "Nebraska",
+            "id": "262"
+        },
+        {
+            "name": "Nei Mongol",
+            "id": "470"
+        },
+        {
+            "name": "Nepal",
+            "id": "60"
+        },
+        {
+            "name": "Netherlands",
+            "id": "287"
+        },
+        {
+            "name": "Netherlands Antilles",
+            "id": "194"
+        },
+        {
+            "name": "Netherlands Leeward Is.",
+            "id": "657"
+        },
+        {
+            "name": "Neuquen",
+            "id": "716"
+        },
+        {
+            "name": "Nevada",
+            "id": "188"
+        },
+        {
+            "name": "New Brunswick",
+            "id": "260"
+        },
+        {
+            "name": "New Caledonia",
+            "id": "111"
+        },
+        {
+            "name": "Jalisco",
+            "id": "634"
+        },
+        {
+            "name": "Jamaica",
+            "id": "153"
+        },
+        {
+            "name": "Jammu-Kashmir",
+            "id": "543"
+        },
+        {
+            "name": "Japan",
+            "id": "202"
+        },
+        {
+            "name": "Jawa",
+            "id": "115"
+        },
+        {
+            "name": "Jharkhand",
+            "id": "527"
+        },
+        {
+            "name": "Jiangsu",
+            "id": "489"
+        },
+        {
+            "name": "Jiangxi",
+            "id": "490"
+        },
+        {
+            "name": "Jilin",
+            "id": "473"
+        },
+        {
+            "name": "Johnston I.",
+            "id": "593"
+        },
+        {
+            "name": "Jordan",
+            "id": "456"
+        },
+        {
+            "name": "Juan Fernández Is.",
+            "id": "334"
+        },
+        {
+            "name": "Jujuy",
+            "id": "721"
+        },
+        {
+            "name": "Kabardino-Balkariya",
+            "id": "441"
+        },
+        {
+            "name": "Kalimantan",
+            "id": "552"
+        },
+        {
+            "name": "Kaliningrad",
+            "id": "402"
+        },
+        {
+            "name": "Kamchatka",
+            "id": "318"
+        },
+        {
+            "name": "Kansas",
+            "id": "232"
+        },
+        {
+            "name": "Karacheyevo-Cherkessiya",
+            "id": "442"
+        },
+        {
+            "name": "Karaikal",
+            "id": "529"
+        },
+        {
+            "name": "Palau",
+            "id": "588"
+        },
+        {
+            "name": "Palestine",
+            "id": "117"
+        },
+        {
+            "name": "Panamá",
+            "id": "65"
+        },
+        {
+            "name": "Papua New Guinea",
+            "id": "561"
+        },
+        {
+            "name": "Papuasia",
+            "id": "560"
+        },
+        {
+            "name": "Para",
+            "id": "697"
+        },
+        {
+            "name": "Paracel Is.",
+            "id": "548"
+        },
+        {
+            "name": "Paraguay",
+            "id": "160"
+        },
+        {
+            "name": "Paraiba",
+            "id": "684"
+        },
+        {
+            "name": "Parana",
+            "id": "701"
+        },
+        {
+            "name": "Peninsular Malaysia",
+            "id": "558"
+        },
+        {
+            "name": "Pennsylvania",
+            "id": "241"
+        },
+        {
+            "name": "Pernambuco",
+            "id": "685"
+        },
+        {
+            "name": "Peru",
+            "id": "141"
+        },
+        {
+            "name": "Philippines",
+            "id": "66"
+        },
+        {
+            "name": "Phoenix Is.",
+            "id": "340"
+        },
+        {
+            "name": "Piaui",
+            "id": "686"
+        },
+        {
+            "name": "Pitcairn Is.",
+            "id": "335"
+        },
+        {
+            "name": "Poland",
+            "id": "292"
+        },
+        {
+            "name": "Pondicherry",
+            "id": "535"
+        },
+        {
+            "name": "Cuba",
+            "id": "152"
+        },
+        {
+            "name": "Curaçao",
+            "id": "662"
+        },
+        {
+            "name": "Cyprus",
+            "id": "266"
+        },
+        {
+            "name": "Czechoslovakia",
+            "id": "99"
+        },
+        {
+            "name": "Czech Republic",
+            "id": "378"
+        },
+        {
+            "name": "Dadra-Nagar-Haveli",
+            "id": "520"
+        },
+        {
+            "name": "Dagestan",
+            "id": "439"
+        },
+        {
+            "name": "Daman",
+            "id": "523"
+        },
+        {
+            "name": "Darjiling",
+            "id": "514"
+        },
+        {
+            "name": "Delaware",
+            "id": "228"
+        },
+        {
+            "name": "Delhi",
+            "id": "521"
+        },
+        {
+            "name": "Denmark",
+            "id": "280"
+        },
+        {
+            "name": "Desventurados Is.",
+            "id": "351"
+        },
+        {
+            "name": "District of Columbia",
+            "id": "229"
+        },
+        {
+            "name": "Diu",
+            "id": "522"
+        },
+        {
+            "name": "Djibouti",
+            "id": "6"
+        },
+        {
+            "name": "Dominica",
+            "id": "667"
+        },
+        {
+            "name": "Dominican Republic",
+            "id": "139"
+        },
+        {
+            "name": "Durango",
+            "id": "616"
+        },
+        {
+            "name": "East Aegean Is.",
+            "id": "118"
+        },
+        {
+            "name": "Rio Negro",
+            "id": "717"
+        },
+        {
+            "name": "Rocas Alijos",
+            "id": "626"
+        },
+        {
+            "name": "Rodrigues",
+            "id": "172"
+        },
+        {
+            "name": "Romania",
+            "id": "96"
+        },
+        {
+            "name": "Rondonia",
+            "id": "699"
+        },
+        {
+            "name": "Roraima",
+            "id": "698"
+        },
+        {
+            "name": "Russian Far East",
+            "id": "435"
+        },
+        {
+            "name": "Rwanda",
+            "id": "68"
+        },
+        {
+            "name": "Sabah",
+            "id": "553"
+        },
+        {
+            "name": "Sakhalin",
+            "id": "323"
+        },
+        {
+            "name": "Salta",
+            "id": "724"
+        },
+        {
+            "name": "Samoa",
+            "id": "220"
+        },
+        {
+            "name": "San Juan",
+            "id": "726"
+        },
+        {
+            "name": "San Luis",
+            "id": "727"
+        },
+        {
+            "name": "San Luis Potosí",
+            "id": "621"
+        },
+        {
+            "name": "San Marino",
+            "id": "389"
+        },
+        {
+            "name": "Santa Catarina",
+            "id": "703"
+        },
+        {
+            "name": "Santa Cruz",
+            "id": "718"
+        },
+        {
+            "name": "Santa Cruz Is.",
+            "id": "112"
+        },
+        {
+            "name": "Santa Fe",
+            "id": "714"
+        },
+        {
+            "name": "Portugal",
+            "id": "134"
+        },
+        {
+            "name": "Primorye",
+            "id": "311"
+        },
+        {
+            "name": "Prince Edward I.",
+            "id": "301"
+        },
+        {
+            "name": "Príncipe",
+            "id": "416"
+        },
+        {
+            "name": "Puebla",
+            "id": "611"
+        },
+        {
+            "name": "Puerto Rico",
+            "id": "89"
+        },
+        {
+            "name": "Punjab",
+            "id": "536"
+        },
+        {
+            "name": "Qatar",
+            "id": "460"
+        },
+        {
+            "name": "Qinghai",
+            "id": "322"
+        },
+        {
+            "name": "Québec",
+            "id": "242"
+        },
+        {
+            "name": "Queensland",
+            "id": "67"
+        },
+        {
+            "name": "Querétaro",
+            "id": "620"
+        },
+        {
+            "name": "Quintana Roo",
+            "id": "640"
+        },
+        {
+            "name": "Rajasthan",
+            "id": "537"
+        },
+        {
+            "name": "Réunion",
+            "id": "173"
+        },
+        {
+            "name": "Revillagigedo Is.",
+            "id": "627"
+        },
+        {
+            "name": "Rhode I.",
+            "id": "256"
+        },
+        {
+            "name": "Rio de Janeiro",
+            "id": "691"
+        },
+        {
+            "name": "Rio Grande do Norte",
+            "id": "687"
+        },
+        {
+            "name": "Rio Grande do Sul",
+            "id": "702"
+        },
+        {
+            "name": "Maule",
+            "id": "732"
+        },
+        {
+            "name": "Mauritania",
+            "id": "14"
+        },
+        {
+            "name": "Mauritius",
+            "id": "100"
+        },
+        {
+            "name": "Mayotte",
+            "id": "432"
+        },
+        {
+            "name": "Meghalaya",
+            "id": "508"
+        },
+        {
+            "name": "Mendoza",
+            "id": "723"
+        },
+        {
+            "name": "Mexican Pacific Is.",
+            "id": "247"
+        },
+        {
+            "name": "Mexico",
+            "id": "607"
+        },
+        {
+            "name": "Mexico Central",
+            "id": "130"
+        },
+        {
+            "name": "Mexico Distrito Federal",
+            "id": "608"
+        },
+        {
+            "name": "Mexico Gulf",
+            "id": "147"
+        },
+        {
+            "name": "Mexico Northeast",
+            "id": "148"
+        },
+        {
+            "name": "Mexico Northwest",
+            "id": "165"
+        },
+        {
+            "name": "Mexico Southeast",
+            "id": "159"
+        },
+        {
+            "name": "Mexico Southwest",
+            "id": "88"
+        },
+        {
+            "name": "Mexico State",
+            "id": "609"
+        },
+        {
+            "name": "Michigan",
+            "id": "234"
+        },
+        {
+            "name": "Michoacan",
+            "id": "635"
+        },
+        {
+            "name": "Micronesia Federated States",
+            "id": "587"
+        },
+        {
+            "name": "Middle Asia",
+            "id": "436"
+        },
+        {
+            "name": "Lord Howe I.",
+            "id": "567"
+        },
+        {
+            "name": "Los Lagos",
+            "id": "740"
+        },
+        {
+            "name": "Louisiana",
+            "id": "205"
+        },
+        {
+            "name": "Luxembourg",
+            "id": "377"
+        },
+        {
+            "name": "Macaronesia",
+            "id": "411"
+        },
+        {
+            "name": "Macau",
+            "id": "492"
+        },
+        {
+            "name": "Macedonia",
+            "id": "396"
+        },
+        {
+            "name": "Macquarie Is.",
+            "id": "363"
+        },
+        {
+            "name": "Madagascar",
+            "id": "56"
+        },
+        {
+            "name": "Madeira",
+            "id": "129"
+        },
+        {
+            "name": "Madhya Pradesh",
+            "id": "532"
+        },
+        {
+            "name": "Magadan",
+            "id": "186"
+        },
+        {
+            "name": "Magellanes",
+            "id": "741"
+        },
+        {
+            "name": "Maharashtra",
+            "id": "533"
+        },
+        {
+            "name": "Mahe",
+            "id": "531"
+        },
+        {
+            "name": "Maine",
+            "id": "253"
+        },
+        {
+            "name": "Malawi",
+            "id": "57"
+        },
+        {
+            "name": "Malaya",
+            "id": "58"
+        },
+        {
+            "name": "Maldives",
+            "id": "218"
+        },
+        {
+            "name": "Malesia",
+            "id": "550"
+        },
+        {
+            "name": "KwaZulu-Natal",
+            "id": "103"
+        },
+        {
+            "name": "Kyushu",
+            "id": "500"
+        },
+        {
+            "name": "La Araucania",
+            "id": "731"
+        },
+        {
+            "name": "Labrador",
+            "id": "299"
+        },
+        {
+            "name": "Laccadive Is.",
+            "id": "217"
+        },
+        {
+            "name": "Laos",
+            "id": "54"
+        },
+        {
+            "name": "La Pampa",
+            "id": "712"
+        },
+        {
+            "name": "La Rioja",
+            "id": "722"
+        },
+        {
+            "name": "Latvia",
+            "id": "403"
+        },
+        {
+            "name": "Lebanon",
+            "id": "454"
+        },
+        {
+            "name": "Lebanon-Syria",
+            "id": "109"
+        },
+        {
+            "name": "Leeward Is.",
+            "id": "158"
+        },
+        {
+            "name": "Lesotho",
+            "id": "222"
+        },
+        {
+            "name": "Lesser Sunda Is.",
+            "id": "110"
+        },
+        {
+            "name": "Liaoning",
+            "id": "474"
+        },
+        {
+            "name": "Liberia",
+            "id": "55"
+        },
+        {
+            "name": "Libya",
+            "id": "269"
+        },
+        {
+            "name": "Liechtenstein",
+            "id": "375"
+        },
+        {
+            "name": "Line Is.",
+            "id": "339"
+        },
+        {
+            "name": "Lithuania",
+            "id": "404"
+        },
+        {
+            "name": "Santiago",
+            "id": "734"
+        },
+        {
+            "name": "Santiago del Estero",
+            "id": "725"
+        },
+        {
+            "name": "Sao Paulo",
+            "id": "692"
+        },
+        {
+            "name": "São Tomé",
+            "id": "417"
+        },
+        {
+            "name": "Sarawak",
+            "id": "554"
+        },
+        {
+            "name": "Sardegna",
+            "id": "120"
+        },
+        {
+            "name": "Saskatchewan",
+            "id": "330"
+        },
+        {
+            "name": "Saudi Arabia",
+            "id": "18"
+        },
+        {
+            "name": "Selvagens",
+            "id": "338"
+        },
+        {
+            "name": "Senegal",
+            "id": "37"
+        },
+        {
+            "name": "Serbia",
+            "id": "398"
+        },
+        {
+            "name": "Sergipe",
+            "id": "688"
+        },
+        {
+            "name": "Severo-Osetiya",
+            "id": "444"
+        },
+        {
+            "name": "Seychelles",
+            "id": "174"
+        },
+        {
+            "name": "Shaanxi",
+            "id": "478"
+        },
+        {
+            "name": "Shandong",
+            "id": "479"
+        },
+        {
+            "name": "Shanghai",
+            "id": "494"
+        },
+        {
+            "name": "Shanxi",
+            "id": "480"
+        },
+        {
+            "name": "Shikoku",
+            "id": "501"
+        },
+        {
+            "name": "Siberia",
+            "id": "434"
+        },
+        {
+            "name": "Gulf States",
+            "id": "10"
+        },
+        {
+            "name": "Guyana",
+            "id": "157"
+        },
+        {
+            "name": "Hainan",
+            "id": "91"
+        },
+        {
+            "name": "Haiti",
+            "id": "140"
+        },
+        {
+            "name": "Haryana",
+            "id": "526"
+        },
+        {
+            "name": "Hawaii",
+            "id": "183"
+        },
+        {
+            "name": "Hawaiian Is.",
+            "id": "592"
+        },
+        {
+            "name": "Heard-McDonald Is.",
+            "id": "362"
+        },
+        {
+            "name": "Hebei",
+            "id": "477"
+        },
+        {
+            "name": "Heilongjiang",
+            "id": "472"
+        },
+        {
+            "name": "Henan",
+            "id": "486"
+        },
+        {
+            "name": "Hidalgo",
+            "id": "618"
+        },
+        {
+            "name": "Himachal Pradesh",
+            "id": "542"
+        },
+        {
+            "name": "Hokkaido",
+            "id": "498"
+        },
+        {
+            "name": "Honduran Caribbean Is.",
+            "id": "664"
+        },
+        {
+            "name": "Honduras",
+            "id": "87"
+        },
+        {
+            "name": "Hong Kong",
+            "id": "487"
+        },
+        {
+            "name": "Honshu",
+            "id": "499"
+        },
+        {
+            "name": "Howland-Baker Is.",
+            "id": "366"
+        },
+        {
+            "name": "Hubei",
+            "id": "467"
+        },
+        {
+            "name": "Trindade",
+            "id": "693"
+        },
+        {
+            "name": "Trinidad-Tobago",
+            "id": "143"
+        },
+        {
+            "name": "Tripura",
+            "id": "511"
+        },
+        {
+            "name": "Tristan da Cunha",
+            "id": "350"
+        },
+        {
+            "name": "Tuamotu",
+            "id": "348"
+        },
+        {
+            "name": "Tubuai Is.",
+            "id": "245"
+        },
+        {
+            "name": "Tucuman",
+            "id": "728"
+        },
+        {
+            "name": "Tunisia",
+            "id": "295"
+        },
+        {
+            "name": "Turkey",
+            "id": "107"
+        },
+        {
+            "name": "Turkey-in-Europe",
+            "id": "97"
+        },
+        {
+            "name": "Turkmenistan",
+            "id": "337"
+        },
+        {
+            "name": "Turks-Caicos Is.",
+            "id": "190"
+        },
+        {
+            "name": "Tuva",
+            "id": "312"
+        },
+        {
+            "name": "Tuvalu",
+            "id": "251"
+        },
+        {
+            "name": "Uganda",
+            "id": "23"
+        },
+        {
+            "name": "Ukraine",
+            "id": "273"
+        },
+        {
+            "name": "United Arab Emirates",
+            "id": "461"
+        },
+        {
+            "name": "Uruguay",
+            "id": "170"
+        },
+        {
+            "name": "U.S. Line Is.",
+            "id": "585"
+        },
+        {
+            "name": "Utah",
+            "id": "341"
+        },
+        {
+            "name": "Western Australia",
+            "id": "74"
+        },
+        {
+            "name": "Western Canada",
+            "id": "597"
+        },
+        {
+            "name": "Western Cape Province",
+            "id": "424"
+        },
+        {
+            "name": "Western Indian Ocean",
+            "id": "430"
+        },
+        {
+            "name": "Western Sahara",
+            "id": "38"
+        },
+        {
+            "name": "Western South America",
+            "id": "673"
+        },
+        {
+            "name": "West Himalaya",
+            "id": "73"
+        },
+        {
+            "name": "West Siberia",
+            "id": "296"
+        },
+        {
+            "name": "West Tropical Africa",
+            "id": "412"
+        },
+        {
+            "name": "West Virginia",
+            "id": "244"
+        },
+        {
+            "name": "Windward Is.",
+            "id": "162"
+        },
+        {
+            "name": "Wisconsin",
+            "id": "258"
+        },
+        {
+            "name": "Wyoming",
+            "id": "346"
+        },
+        {
+            "name": "Xinjiang",
+            "id": "324"
+        },
+        {
+            "name": "Yakutskiya",
+            "id": "313"
+        },
+        {
+            "name": "Yanam",
+            "id": "541"
+        },
+        {
+            "name": "Yemen",
+            "id": "24"
+        },
+        {
+            "name": "Yucatán",
+            "id": "642"
+        },
+        {
+            "name": "Yugoslavia",
+            "id": "98"
+        },
+        {
+            "name": "Yukon",
+            "id": "347"
+        },
+        {
+            "name": "North Caucasus",
+            "id": "288"
+        },
+        {
+            "name": "North-Central Pacific",
+            "id": "591"
+        },
+        {
+            "name": "North-Central U.S.A.",
+            "id": "602"
+        },
+        {
+            "name": "North Dakota",
+            "id": "332"
+        },
+        {
+            "name": "Northeastern U.S.A.",
+            "id": "603"
+        },
+        {
+            "name": "Northeast Tropical Africa",
+            "id": "418"
+        },
+        {
+            "name": "Northern Africa",
+            "id": "408"
+        },
+        {
+            "name": "Northern America",
+            "id": "595"
+        },
+        {
+            "name": "Northern Cape Province",
+            "id": "423"
+        },
+        {
+            "name": "Northern Europe",
+            "id": "370"
+        },
+        {
+            "name": "Northern Ireland",
+            "id": "372"
+        },
+        {
+            "name": "Northern Marianas",
+            "id": "590"
+        },
+        {
+            "name": "Northern Province",
+            "id": "427"
+        },
+        {
+            "name": "Northern Provinces",
+            "id": "1"
+        },
+        {
+            "name": "Northern South America",
+            "id": "672"
+        },
+        {
+            "name": "Northern Territory",
+            "id": "64"
+        },
+        {
+            "name": "North European Russi",
+            "id": "289"
+        },
+        {
+            "name": "North Korea",
+            "id": "502"
+        },
+        {
+            "name": "North Solomons",
+            "id": "563"
+        },
+        {
+            "name": "Northwestern Pacific",
+            "id": "586"
+        },
+        {
+            "name": "Mali",
+            "id": "13"
+        },
+        {
+            "name": "Malpelo I.",
+            "id": "647"
+        },
+        {
+            "name": "Malta",
+            "id": "391"
+        },
+        {
+            "name": "Maluku",
+            "id": "195"
+        },
+        {
+            "name": "Manchuria",
+            "id": "310"
+        },
+        {
+            "name": "Manihiki Is.",
+            "id": "580"
+        },
+        {
+            "name": "Manipur",
+            "id": "507"
+        },
+        {
+            "name": "Manitoba",
+            "id": "259"
+        },
+        {
+            "name": "Maranhao",
+            "id": "683"
+        },
+        {
+            "name": "Marcus I.",
+            "id": "365"
+        },
+        {
+            "name": "Marianas",
+            "id": "180"
+        },
+        {
+            "name": "Marion-Prince Edward",
+            "id": "364"
+        },
+        {
+            "name": "Marquesas",
+            "id": "265"
+        },
+        {
+            "name": "Marshall Is.",
+            "id": "263"
+        },
+        {
+            "name": "Martinique",
+            "id": "669"
+        },
+        {
+            "name": "Maryland",
+            "id": "233"
+        },
+        {
+            "name": "Masachusettes",
+            "id": "254"
+        },
+        {
+            "name": "Mato Grosso",
+            "id": "678"
+        },
+        {
+            "name": "Mato Grosso do Sul",
+            "id": "677"
+        },
+        {
+            "name": "Ma-tsu-Pai-chuan",
+            "id": "493"
+        },
+        {
+            "name": "Middle Atlantic Ocean",
+            "id": "429"
+        },
+        {
+            "name": "Middle Europe",
+            "id": "373"
+        },
+        {
+            "name": "Midway Is.",
+            "id": "594"
+        },
+        {
+            "name": "Minas Gerais",
+            "id": "690"
+        },
+        {
+            "name": "Minnesota",
+            "id": "257"
+        },
+        {
+            "name": "Misiones",
+            "id": "713"
+        },
+        {
+            "name": "Mississippi",
+            "id": "206"
+        },
+        {
+            "name": "Missouri",
+            "id": "235"
+        },
+        {
+            "name": "Mizoram",
+            "id": "509"
+        },
+        {
+            "name": "Moldova",
+            "id": "405"
+        },
+        {
+            "name": "Monaco",
+            "id": "383"
+        },
+        {
+            "name": "Mongolia",
+            "id": "321"
+        },
+        {
+            "name": "Mongolia",
+            "id": "496"
+        },
+        {
+            "name": "Montana",
+            "id": "328"
+        },
+        {
+            "name": "Montenegro",
+            "id": "397"
+        },
+        {
+            "name": "Montserrat",
+            "id": "656"
+        },
+        {
+            "name": "Morelos",
+            "id": "610"
+        },
+        {
+            "name": "Morocco",
+            "id": "131"
+        },
+        {
+            "name": "Mozambique",
+            "id": "26"
+        },
+        {
+            "name": "Mozambique Channel I",
+            "id": "216"
+        },
+        {
+            "name": "Southeastern Europe",
+            "id": "387"
+        },
+        {
+            "name": "Southeastern U.S.A.",
+            "id": "606"
+        },
+        {
+            "name": "Southern Africa",
+            "id": "421"
+        },
+        {
+            "name": "Southern America",
+            "id": "643"
+        },
+        {
+            "name": "Southern South America",
+            "id": "704"
+        },
+        {
+            "name": "South European Russi",
+            "id": "270"
+        },
+        {
+            "name": "South Georgia",
+            "id": "361"
+        },
+        {
+            "name": "South Korea",
+            "id": "503"
+        },
+        {
+            "name": "South Sandwich Is.",
+            "id": "368"
+        },
+        {
+            "name": "South Solomons",
+            "id": "564"
+        },
+        {
+            "name": "South Tropical Africa",
+            "id": "420"
+        },
+        {
+            "name": "Southwest Caribbean",
+            "id": "179"
+        },
+        {
+            "name": "Southwestern Europe",
+            "id": "380"
+        },
+        {
+            "name": "Southwestern Pacific",
+            "id": "577"
+        },
+        {
+            "name": "Southwestern U.S.A.",
+            "id": "604"
+        },
+        {
+            "name": "South Yemen",
+            "id": "463"
+        },
+        {
+            "name": "Spain",
+            "id": "135"
+        },
+        {
+            "name": "Spanish North African Territories",
+            "id": "410"
+        },
+        {
+            "name": "Spratly Is.",
+            "id": "549"
+        },
+        {
+            "name": "Sri Lanka",
+            "id": "105"
+        },
+        {
+            "name": "Yunnan",
+            "id": "469"
+        },
+        {
+            "name": "Zacatecas",
+            "id": "623"
+        },
+        {
+            "name": "Zaïre",
+            "id": "76"
+        },
+        {
+            "name": "Zambia",
+            "id": "75"
+        },
+        {
+            "name": "Zhejiang",
+            "id": "495"
+        },
+        {
+            "name": "Zimbabwe",
+            "id": "27"
+        },
+        {
+            "name": "Uttaranchal",
+            "id": "544"
+        },
+        {
+            "name": "Uttar Pradesh",
+            "id": "539"
+        },
+        {
+            "name": "Uzbekistan",
+            "id": "274"
+        },
+        {
+            "name": "Valparaiso",
+            "id": "735"
+        },
+        {
+            "name": "Vanuatu",
+            "id": "114"
+        },
+        {
+            "name": "Vatican City",
+            "id": "390"
+        },
+        {
+            "name": "Venezuela",
+            "id": "142"
+        },
+        {
+            "name": "Venezuelan Antilles",
+            "id": "175"
+        },
+        {
+            "name": "Veracruz",
+            "id": "624"
+        },
+        {
+            "name": "Vermont",
+            "id": "243"
+        },
+        {
+            "name": "Victoria",
+            "id": "210"
+        },
+        {
+            "name": "Vietnam",
+            "id": "72"
+        },
+        {
+            "name": "Virginia",
+            "id": "224"
+        },
+        {
+            "name": "Virgin Is.",
+            "id": "660"
+        },
+        {
+            "name": "Wake I.",
+            "id": "357"
+        },
+        {
+            "name": "Wallis-Futuna Is.",
+            "id": "221"
+        },
+        {
+            "name": "Washington",
+            "id": "302"
+        },
+        {
+            "name": "West Bengal",
+            "id": "540"
+        },
+        {
+            "name": "West-Central Tropical Africa",
+            "id": "413"
+        },
+        {
+            "name": "Western Asia",
+            "id": "453"
+        },
+        {
+            "name": "Tadzhikistan",
+            "id": "271"
+        },
+        {
+            "name": "Taiwan",
+            "id": "92"
+        },
+        {
+            "name": "Tamaulipas",
+            "id": "622"
+        },
+        {
+            "name": "Tamil Nadu",
+            "id": "538"
+        },
+        {
+            "name": "Tanzania",
+            "id": "22"
+        },
+        {
+            "name": "Tarapaca",
+            "id": "738"
+        },
+        {
+            "name": "Tasmania",
+            "id": "215"
+        },
+        {
+            "name": "Tennessee",
+            "id": "149"
+        },
+        {
+            "name": "Texas",
+            "id": "168"
+        },
+        {
+            "name": "Thailand",
+            "id": "71"
+        },
+        {
+            "name": "Tianjin",
+            "id": "481"
+        },
+        {
+            "name": "Tibet",
+            "id": "201"
+        },
+        {
+            "name": "Tierra del Fuego (Argentina)",
+            "id": "719"
+        },
+        {
+            "name": "Tlaxcala",
+            "id": "612"
+        },
+        {
+            "name": "Tocantins",
+            "id": "700"
+        },
+        {
+            "name": "Togo",
+            "id": "106"
+        },
+        {
+            "name": "Tokelau",
+            "id": "582"
+        },
+        {
+            "name": "Tokelau-Manihiki",
+            "id": "248"
+        },
+        {
+            "name": "Tonga",
+            "id": "200"
+        },
+        {
+            "name": "Transcaucasus",
+            "id": "272"
+        },
+        {
+            "name": "Newfoundland",
+            "id": "300"
+        },
+        {
+            "name": "New Guinea",
+            "id": "61"
+        },
+        {
+            "name": "New Hampshire",
+            "id": "255"
+        },
+        {
+            "name": "New Jersey",
+            "id": "236"
+        },
+        {
+            "name": "New Mexico",
+            "id": "167"
+        },
+        {
+            "name": "New South Wales",
+            "id": "196"
+        },
+        {
+            "name": "New York",
+            "id": "237"
+        },
+        {
+            "name": "New Zealand",
+            "id": "575"
+        },
+        {
+            "name": "New Zealand North",
+            "id": "132"
+        },
+        {
+            "name": "New Zealand South",
+            "id": "133"
+        },
+        {
+            "name": "Nicaragua",
+            "id": "62"
+        },
+        {
+            "name": "Nicaraguan Caribbean Is.",
+            "id": "665"
+        },
+        {
+            "name": "Nicobar Is.",
+            "id": "63"
+        },
+        {
+            "name": "Niger",
+            "id": "15"
+        },
+        {
+            "name": "Nigeria",
+            "id": "36"
+        },
+        {
+            "name": "Ningxia",
+            "id": "471"
+        },
+        {
+            "name": "Niue",
+            "id": "199"
+        },
+        {
+            "name": "Norfolk I.",
+            "id": "568"
+        },
+        {
+            "name": "Norfolk Is.",
+            "id": "209"
+        },
+        {
+            "name": "North Carolina",
+            "id": "238"
+        },
+        {
+            "name": "Stavropol",
+            "id": "445"
+        },
+        {
+            "name": "St.Helena",
+            "id": "184"
+        },
+        {
+            "name": "St. Kitts-Nevis",
+            "id": "658"
+        },
+        {
+            "name": "St. Lucia",
+            "id": "670"
+        },
+        {
+            "name": "St. Martin-St. Barthelemy",
+            "id": "659"
+        },
+        {
+            "name": "St. Pierre-Miquelon",
+            "id": "600"
+        },
+        {
+            "name": "St. Vincent",
+            "id": "671"
+        },
+        {
+            "name": "Subantarctic Islands",
+            "id": "743"
+        },
+        {
+            "name": "Subarctic America",
+            "id": "596"
+        },
+        {
+            "name": "Sudan",
+            "id": "21"
+        },
+        {
+            "name": "Sulawesi",
+            "id": "70"
+        },
+        {
+            "name": "Sumatera",
+            "id": "116"
+        },
+        {
+            "name": "Suriname",
+            "id": "161"
+        },
+        {
+            "name": "Svalbard",
+            "id": "316"
+        },
+        {
+            "name": "Swains I.",
+            "id": "581"
+        },
+        {
+            "name": "Swaziland",
+            "id": "136"
+        },
+        {
+            "name": "Sweden",
+            "id": "293"
+        },
+        {
+            "name": "Switzerland",
+            "id": "294"
+        },
+        {
+            "name": "Syria",
+            "id": "455"
+        },
+        {
+            "name": "Tabasco",
+            "id": "641"
+        },
+        {
+            "name": "Northwestern U.S.A.",
+            "id": "601"
+        },
+        {
+            "name": "Northwest European R",
+            "id": "290"
+        },
+        {
+            "name": "North-West Province",
+            "id": "428"
+        },
+        {
+            "name": "Northwest Territorie",
+            "id": "329"
+        },
+        {
+            "name": "North Yemen",
+            "id": "462"
+        },
+        {
+            "name": "Norway",
+            "id": "291"
+        },
+        {
+            "name": "Nova Scotia",
+            "id": "261"
+        },
+        {
+            "name": "Nuevo León",
+            "id": "619"
+        },
+        {
+            "name": "Nunavut",
+            "id": "353"
+        },
+        {
+            "name": "Oaxaca",
+            "id": "637"
+        },
+        {
+            "name": "Ogasawara-shoto",
+            "id": "250"
+        },
+        {
+            "name": "O'Higgins",
+            "id": "733"
+        },
+        {
+            "name": "Ohio",
+            "id": "239"
+        },
+        {
+            "name": "Oklahoma",
+            "id": "225"
+        },
+        {
+            "name": "Oman",
+            "id": "16"
+        },
+        {
+            "name": "Ontario",
+            "id": "240"
+        },
+        {
+            "name": "Oregon",
+            "id": "315"
+        },
+        {
+            "name": "Orissa",
+            "id": "534"
+        },
+        {
+            "name": "Pacific",
+            "id": "576"
+        },
+        {
+            "name": "Pakistan",
+            "id": "17"
+        },
+        {
+            "name": "Sichuan",
+            "id": "468"
+        },
+        {
+            "name": "Sicilia",
+            "id": "121"
+        },
+        {
+            "name": "Sierra Leone",
+            "id": "69"
+        },
+        {
+            "name": "Sikkim",
+            "id": "515"
+        },
+        {
+            "name": "Sinai",
+            "id": "19"
+        },
+        {
+            "name": "Sinaloa",
+            "id": "630"
+        },
+        {
+            "name": "Singapore",
+            "id": "559"
+        },
+        {
+            "name": "Slovakia",
+            "id": "379"
+        },
+        {
+            "name": "Slovenia",
+            "id": "399"
+        },
+        {
+            "name": "Society Is.",
+            "id": "187"
+        },
+        {
+            "name": "Socotra",
+            "id": "104"
+        },
+        {
+            "name": "Solomon Is.",
+            "id": "113"
+        },
+        {
+            "name": "Somalia",
+            "id": "20"
+        },
+        {
+            "name": "Sonora",
+            "id": "631"
+        },
+        {
+            "name": "South Australia",
+            "id": "214"
+        },
+        {
+            "name": "South Carolina",
+            "id": "192"
+        },
+        {
+            "name": "South-Central Pacific",
+            "id": "583"
+        },
+        {
+            "name": "South-Central U.S.A.",
+            "id": "605"
+        },
+        {
+            "name": "South China Sea",
+            "id": "197"
+        },
+        {
+            "name": "South Dakota",
+            "id": "331"
+        }
+    ]
+}

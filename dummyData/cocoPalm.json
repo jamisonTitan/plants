@@ -1,0 +1,31 @@
+{
+      "id": 122263,
+      "common_name": "Coconut palm",
+      "slug": "cocos-nucifera",
+      "scientific_name": "Cocos nucifera",
+      "year": 1753,
+      "bibliography": "Sp. Pl.: 1188 (1753)",
+      "author": "L.",
+      "status": "accepted",
+      "rank": "species",
+      "family_common_name": "Palm family",
+      "genus_id": 1916,
+      "image_url": "https://bs.floristic.org/image/o/cdfddf30789d9ce9c13f0ca5a2a95ebe2189183c",
+      "synonyms": [
+        "Calappa nucifera",
+        "Cocos nana",
+        "Cocos indica",
+        "Palma cocos",
+        "Cocos mamillaris",
+        "Cocos nucifera var. synphyllica",
+        "Diplothemium henryanum",
+        "Cocos nucifera var. spicata"
+      ],
+      "genus": "Cocos",
+      "family": "Arecaceae",
+      "links": {
+        "self": "/api/v1/species/cocos-nucifera",
+        "plant": "/api/v1/plants/cocos-nucifera",
+        "genus": "/api/v1/genus/cocos"
+      }
+    }

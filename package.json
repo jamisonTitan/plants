@@ -1,0 +1,21 @@
+{
+  "name": "try-again",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo": "^2.32.1",
+    "apollo-datasource-rest": "^0.9.7",
+    "apollo-server": "^2.19.2",
+    "fs": "^0.0.1-security",
+    "graphql": "^14.7.0",
+    "node-fetch": "^2.6.1",
+    "npm": "^7.5.4",
+    "react-native-bcrypt": "^2.4.0"
+  }
+}

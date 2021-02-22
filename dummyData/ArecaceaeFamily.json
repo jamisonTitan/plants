@@ -1,0 +1,60 @@
+{
+    "data": {
+        "id": 29,
+        "name": "Arecaceae",
+        "common_name": "Palm family",
+        "slug": "arecaceae",
+        "links": {
+            "self": "/api/v1/families/arecaceae",
+            "division_order": "/api/v1/division_orders/arecales",
+            "genus": "/api/v1/families/arecaceae/genus"
+        },
+        "division_order": {
+            "id": 24,
+            "name": "Arecales",
+            "slug": "arecales",
+            "links": {
+                "self": "/api/v1/division_orders/arecales",
+                "division_class": "/api/v1/division_classes/liliopsida"
+            },
+            "division_class": {
+                "id": 4,
+                "name": "Liliopsida",
+                "slug": "liliopsida",
+                "links": {
+                    "self": "/api/v1/division_classes/liliopsida",
+                    "division": "/api/v1/divisions/magnoliophyta"
+                },
+                "division": {
+                    "id": 1,
+                    "name": "Magnoliophyta",
+                    "slug": "magnoliophyta",
+                    "links": {
+                        "self": "/api/v1/divisions/magnoliophyta",
+                        "subkingdom": "/api/v1/subkingdoms/tracheobionta"
+                    },
+                    "subkingdom": {
+                        "id": 1,
+                        "name": "Tracheobionta",
+                        "slug": "tracheobionta",
+                        "links": {
+                            "self": "/api/v1/subkingdoms/tracheobionta",
+                            "kingdom": "/api/v1/kingdoms/1"
+                        },
+                        "kingdom": {
+                            "id": 1,
+                            "name": "Plantae",
+                            "slug": null,
+                            "links": {
+                                "self": "/api/v1/kingdoms/1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "meta": {
+        "last_modified": "2018-12-30T15:29:46.108Z"
+    }
+}

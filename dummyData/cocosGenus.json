@@ -1,0 +1,27 @@
+{
+    "data": {
+        "id": 1916,
+        "name": "Cocos",
+        "slug": "cocos",
+        "links": {
+            "self": "/api/v1/genus/cocos",
+            "plants": "/api/v1/genus/cocos/plants",
+            "species": "/api/v1/genus/cocos/species",
+            "family": "/api/v1/families/arecaceae"
+        },
+        "family": {
+            "id": 29,
+            "name": "Arecaceae",
+            "common_name": "Palm family",
+            "slug": "arecaceae",
+            "links": {
+                "self": "/api/v1/families/arecaceae",
+                "division_order": "/api/v1/division_orders/arecales",
+                "genus": "/api/v1/families/arecaceae/genus"
+            }
+        }
+    },
+    "meta": {
+        "last_modified": "2020-12-14T01:41:10.503Z"
+    }
+}

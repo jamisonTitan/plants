@@ -1,0 +1,32 @@
+{
+    "data": {
+        "id": 211,
+        "name": "California",
+        "slug": "cal",
+        "tdwg_code": "CAL",
+        "tdwg_level": 3,
+        "species_count": 7423,
+        "links": {
+            "self": "/api/v1/distributions/cal",
+            "plants": "/api/v1/distributions/cal/plants",
+            "species": "/api/v1/distributions/cal/species"
+        },
+        "parent": {
+            "id": 604,
+            "name": "Southwestern U.S.A.",
+            "slug": "76",
+            "tdwg_code": "76",
+            "tdwg_level": 2,
+            "species_count": 18193,
+            "links": {
+                "self": "/api/v1/distributions/76",
+                "plants": "/api/v1/distributions/76/plants",
+                "species": "/api/v1/distributions/76/species"
+            }
+        },
+        "children": []
+    },
+    "meta": {
+        "last_modified": "2020-08-11T17:43:05.212Z"
+    }
+}
