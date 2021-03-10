@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>171136312997-k64870tedg240cam8402p88b1itpoauc.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBokPnFWxfctHzQkoTPNryO90CWBEPctrQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>171136312997</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.titan.botanistquest</string>
+	<key>PROJECT_ID</key>
+	<string>botanistquest</string>
+	<key>STORAGE_BUCKET</key>
+	<string>botanistquest.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:171136312997:ios:39c0f8faa0de708ce94f4c</string>
+	<key>DATABASE_URL</key>
+	<string>https://botanistquest-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

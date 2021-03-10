@@ -5,8 +5,11 @@ import { StyleSheet, Button, Text, View } from 'react-native';
 import { ApolloProvider, ApolloClient, InMemoryCache, gql, useQuery } from '@apollo/client';
 import Login from './components/LoginOrSignUp';
 import * as firebase from 'firebase';
+import * as AppAuth from 'expo-app-auth';
+import AuthScreen from './components/AuthScreen';
+const URLSchemes = AppAuth;
 
-// Optionally import the services that you want to use
+// Optionally import the services that ou want to use
 //import "firebase/auth";
 //import "firebase/database";
 //import "firebase/firestore";
@@ -38,7 +41,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 const GET_HELLO = gql`
   query GetHello{
@@ -53,6 +55,7 @@ function Navigator() {
   useEffect(() => {
     console.log(loading, data)
     console.log('ERR', error);
+    setTimeout(() => console.log(URLSchemes.length + 'urlSchemes'), 2000);
   }, [count]);
 
   return (
@@ -63,7 +66,8 @@ function Navigator() {
         <View>
           {/* <Text>{data.hello ? data.hello : "err"}poop</Text>
           <Button title="FUK" onPress={() => setCount(count + 1)} /> */}
-          <Login />
+          {/* <Login /> */}
+          <AuthScreen />
         </View>
       }
     </View>
