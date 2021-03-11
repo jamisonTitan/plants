@@ -1,55 +1,55 @@
 {
-  "project_info": {
-    "project_number": "171136312997",
-    "firebase_url": "https://botanistquest-default-rtdb.firebaseio.com",
-    "project_id": "botanistquest",
-    "storage_bucket": "botanistquest.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:171136312997:android:1488a19e13794334e94f4c",
-        "android_client_info": {
-          "package_name": "com.titan.botanistquest"
-        }
-      },
-      "oauth_client": [
+    "project_info": {
+        "project_number": "171136312997",
+        "firebase_url": "https://botanistquest-default-rtdb.firebaseio.com",
+        "project_id": "botanistquest",
+        "storage_bucket": "botanistquest.appspot.com"
+    },
+    "client": [
         {
-          "client_id": "171136312997-k64870tedg240cam8402p88b1itpoauc.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.titan.botanistquest",
-            "certificate_hash": "5dc1bdebabe7140470cac21feb0549c2c9d0c025"
-          }
-        },
-        {
-          "client_id": "171136312997-pa2edtqep0e7li0b1lp3l0s61567hmjq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCPCYMvGZB6nhb4j-ivEoJj1FLoOBo95uE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "171136312997-pa2edtqep0e7li0b1lp3l0s61567hmjq.apps.googleusercontent.com",
-              "client_type": 3
+            "client_info": {
+                "mobilesdk_app_id": "1:171136312997:android:1488a19e13794334e94f4c",
+                "android_client_info": {
+                    "package_name": "com.titan.botanistquest"
+                }
             },
-            {
-              "client_id": "171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.titan.botanistquest"
-              }
+            "oauth_client": [
+                {
+                    "client_id": "171136312997-k64870tedg240cam8402p88b1itpoauc.apps.googleusercontent.com",
+                    "client_type": 1,
+                    "android_info": {
+                        "package_name": "com.titan.botanistquest",
+                        "certificate_hash": "5dc1bdebabe7140470cac21feb0549c2c9d0c025"
+                    }
+                },
+                {
+                    "client_id": "171136312997-pa2edtqep0e7li0b1lp3l0s61567hmjq.apps.googleusercontent.com",
+                    "client_type": 3
+                }
+            ],
+            "api_key": [
+                {
+                    "current_key": "AIzaSyCPCYMvGZB6nhb4j-ivEoJj1FLoOBo95uE"
+                }
+            ],
+            "services": {
+                "appinvite_service": {
+                    "other_platform_oauth_client": [
+                        {
+                            "client_id": "171136312997-pa2edtqep0e7li0b1lp3l0s61567hmjq.apps.googleusercontent.com",
+                            "client_type": 3
+                        },
+                        {
+                            "client_id": "171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.googleusercontent.com",
+                            "client_type": 2,
+                            "ios_info": {
+                                "bundle_id": "com.titan.botanistquest"
+                            }
+                        }
+                    ]
+                }
             }
-          ]
         }
-      }
-    }
-  ],
-  "configuration_version": "1"
+    ],
+    "configuration_version": "1"
 }

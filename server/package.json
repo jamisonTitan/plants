@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo": "^2.32.1",
+    "apollo-datasource": "^0.7.3",
     "apollo-datasource-rest": "^0.9.7",
     "apollo-server": "^2.19.2",
     "fs": "^0.0.1-security",
