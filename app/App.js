@@ -10,6 +10,7 @@ import * as firebase from 'firebase';
 import * as AppAuth from 'expo-app-auth';
 import LoginScreen from './components/LoginScreen';
 import ProfileScreen from './components/ProfileScreen';
+import "firebase/functions";
 
 const URLSchemes = AppAuth;
 
@@ -19,7 +20,6 @@ const Stack = createStackNavigator();
 //import "firebase/auth";
 //import "firebase/database";
 //import "firebase/firestore";
-//import "firebase/functions";
 //import "firebase/storage";
 
 const client = new ApolloClient({
