@@ -13,6 +13,7 @@
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
+    "apollo-datasource": "^0.7.3",
     "bcryptjs": "^2.4.3",
     "expo": "~40.0.0",
     "expo-app-auth": "~9.3.0",
