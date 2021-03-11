@@ -3,11 +3,17 @@ import React, { useEffect, useState } from 'react';
 import { AppRegistry } from 'react-native';
 import { StyleSheet, Button, Text, View } from 'react-native';
 import { ApolloProvider, ApolloClient, InMemoryCache, gql, useQuery } from '@apollo/client';
-import Login from './components/LoginOrSignUp';
+import 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import * as firebase from 'firebase';
 import * as AppAuth from 'expo-app-auth';
-import AuthScreen from './components/AuthScreen';
+import LoginScreen from './components/LoginScreen';
+import ProfileScreen from './components/ProfileScreen';
+
 const URLSchemes = AppAuth;
+
+const Stack = createStackNavigator();
 
 // Optionally import the services that ou want to use
 //import "firebase/auth";
@@ -48,37 +54,15 @@ const GET_HELLO = gql`
   }
 `
 
-function Navigator() {
-  const { loading, error, data } = useQuery(GET_HELLO);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log(loading, data)
-    console.log('ERR', error);
-    setTimeout(() => console.log(URLSchemes.length + 'urlSchemes'), 2000);
-  }, [count]);
-
-  return (
-    <View style={styles.container}>
-      {loading ?
-        <Text>Loading...</Text>
-        :
-        <View>
-          {/* <Text>{data.hello ? data.hello : "err"}poop</Text>
-          <Button title="FUK" onPress={() => setCount(count + 1)} /> */}
-          {/* <Login /> */}
-          <AuthScreen />
-        </View>
-      }
-    </View>
-  )
-
-}
-
 export default function App() {
   return (
     <ApolloProvider client={client}>
-      <Navigator />
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </ApolloProvider>
   );
 }
