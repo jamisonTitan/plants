@@ -1,9 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server');
 const firebase = require('firebase');
-const typeDefs = require('./typeDefs');
-const resolvers = require('./resolvers');
-const TrefleAPI = require('./datasources/trefle');
-const UserAPI = require('./datasources/user');
+const { module, console } = require('@ungap/global-this');
 
 //TODO move firebase config vars to a .env file
 // Your web app's Firebase configuration
@@ -23,24 +19,25 @@ const firebaseConfig = {
 firebase.apps.length ? firebase.app() : firebase.initializeApp(firebaseConfig);
 const store = undefined; //TODO connect to firebase store
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: ({ req }) => {
-        return {
-            headers: req.headers,
-        };
+export const databaseController = {
+    createUser: (user) => {
+        firebase.database().ref('users/' + user.id).set({ ...user });
     },
-    dataSources: () => ({
-        trefleAPI: new TrefleAPI(),
-        userAPI: new UserAPI({ store })
-    })
-});
+    isReturningUser: async (userId) => {
+        let email = '';
+        firebase
+            .database()
+            .ref(`users/${userId}`)
+            .once("value")
+            .then(snapshot => {
+                email = snapshot.child('email').val();
+            });
+        if (email != '') {
+            return true;
+        } else {
+            return false;
+        }
 
-server.listen().then(({ url }) => {
-    console.log(`
-    🅢 🅔 🅡 🅥 🅔 🅡   🅡 🅤 🅝 🅝 🅘 🅝 🅖   🅐 🅣 : ${url}
-    http://localhost:4000/graphql
-    `);
-})
+    }
+};
 

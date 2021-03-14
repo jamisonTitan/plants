@@ -1,6 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Button } from "react-native";
 import * as Google from "expo-google-app-auth";
+import { databaseController } from '../firebase';
+
+
 
 const IOS_CLIENT_ID = '171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.googleusercontent.com',
     AND_CLIENT_ID = '171136312997-k64870tedg240cam8402p88b1itpoauc.apps.googleusercontent.com',
@@ -19,7 +22,7 @@ const LoginScreen = ({ navigation }) => {
 
             if (type === "success") {
                 // Then you can use the Google REST API
-                console.log("success, navigating to profile");
+                console.log("success, navigating to profile:" + user.id);
                 navigation.navigate("Profile", { user });
             }
         } catch (error) {

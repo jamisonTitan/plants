@@ -20,7 +20,7 @@
     "ios": {
       "bundleIdentifier": "com.titan.botanistquest",
       "supportsTablet": true,
-      "googleServicesFile": "../googleService-info.plist",
+      "googleServicesFile": "./googleService-info.plist",
       "config": {
         "googleSignIn": {
           "reservedClientId": "com.googleusercontent.apps.171136312997-3lsq32vuq1fcoblfgp759k6713jnnt83"
@@ -30,7 +30,7 @@
     "android": {
       "package": "com.titan.botanistquest",
       "versionCode": 1,
-      "googleServicesFile": "../google-services.json",
+      "googleServicesFile": "./google-services.json",
       "config": {
         "googleSignIn": {
           "apiKey": "AIzaSyAHFF7PSDIjyh9oTayVjTeGmLPYl3q2r-Y",
