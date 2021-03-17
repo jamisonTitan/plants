@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View, Button } from "react-native";
 import * as Google from "expo-google-app-auth";
 import { databaseController } from '../firebase';
+import { Card } from "react-native-elements";
 
 
 
@@ -21,7 +22,6 @@ const LoginScreen = ({ navigation }) => {
             });
 
             if (type === "success") {
-                // Then you can use the Google REST API
                 console.log("success, navigating to profile:" + user.id);
                 navigation.navigate("Profile", { user });
             }
@@ -31,12 +31,27 @@ const LoginScreen = ({ navigation }) => {
     };
 
     return (
-        <View style={styles.container}>
-            <Button title="Login with Google" onPress={signInAsync} />
+        <View style={styles.container} >
+            < View style={styles.buttonContainer}>
+                <Button
+                    color="#000"
+                    style={styles.button}
+                    title="Login with Google" onPress={signInAsync} />
+            </View >
         </View>
     );
 };
 
-export default LoginScreen;
+const styles = StyleSheet.create({
+    buttonContainer: {
+        borderRadius: 0,
+        margin: 0,
+        marginTop: '50%',
+    },
+    container: {
+        flex: 1,
+        backgroundColor: '#4b8b3b',
+    }
+});
 
-const styles = StyleSheet.create({});
+export default LoginScreen;

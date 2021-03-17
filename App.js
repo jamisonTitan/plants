@@ -8,6 +8,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import * as AppAuth from 'expo-app-auth';
 import LoginScreen from './components/LoginScreen';
 import ProfileScreen from './components/ProfileScreen';
+import ChooseDistributionScreen from './components/ChooseDistributionScreen';
+import HomeScreen from './components/HomeScreen';
 
 const URLSchemes = AppAuth;
 
@@ -26,6 +28,8 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="ChooseDistribution" component={ChooseDistributionScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -34,7 +38,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#4b8b3b',
     alignItems: 'center',
     justifyContent: 'center',
   },
