@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { databaseController } from '../firebase';
 import { Card, Image } from "react-native-elements";
 import { FlingGestureHandler } from "react-native-gesture-handler";
 
 const ProfileScreen = ({ route, navigation }) => {
-    const [isReturningUser, setIsReturninguser] = useState({});
     const { user } = route.params;
-    console.log("user from google", user);
-    useEffect(() => {
-        const fetchUser = async () => {
-            const isReturningUser = await databaseController.isReturningUser(user.id);
-            (isReturningUser) ?
-                console.log('Returning User!') :
-                databaseController.createUser(user);
-        }
-        fetchUser();
-    }, []);
     return (
         <View >
             <Card >
