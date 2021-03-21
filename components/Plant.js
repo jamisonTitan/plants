@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
+import { TouchableHighlight } from 'react-native';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { Card } from 'react-native-elements'
+import { Card, Icon } from 'react-native-elements'
 
-const Plant = (plant) => {
-    console.log('PP' + plant.plant);
+export const Plant = (plant) => {
     const [found, setFound] = useState(false);
 
     //used to change https -> http in image_urls
     const remove_first_occurrence = (str, searchstr) => {
-        var index = str.indexOf(searchstr);
+        var index = str == null ? -1 : str.indexOf(searchstr);
         if (index === -1) {
             return str;
         }
         return str.slice(0, index) + str.slice(index + searchstr.length);
     }
+
     return (
         <View>
             <Card containerStyle={styles.card}>
@@ -21,8 +22,7 @@ const Plant = (plant) => {
                     <Image
                         style={styles.avatar}
                         source={{
-                            uri:
-                                remove_first_occurrence(plant.plant.image_url, 's')
+                            uri: remove_first_occurrence(plant.plant.image_url, 's')
                         }}
                     />
                     <View style={styles.info}>
@@ -36,6 +36,27 @@ const Plant = (plant) => {
     );
 }
 
+export const AddMorePlants = ({ onPress }) => {
+    return (
+        <TouchableHighlight
+            onPress={onPress}>
+            <View>
+                <Card containerStyle={styles.card}>
+                    <View
+                        style={styles.iconContainer}>
+                        <Icon
+                            raised
+                            name='plus'
+                            type='font-awesome'
+                            color='#f50'
+                        />
+                    </View>
+                </Card>
+            </View>
+        </TouchableHighlight>
+    )
+}
+
 const styles = StyleSheet.create({
     card: {
         height: 130
@@ -44,6 +65,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'flex-start'
+    },
+    iconContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center'
     },
     avatar: {
         width: 100,
@@ -56,4 +82,3 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Plant;

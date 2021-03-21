@@ -6,7 +6,7 @@ import { FlingGestureHandler } from "react-native-gesture-handler";
 const ProfileScreen = ({ route, navigation }) => {
     const { user } = route.params;
     return (
-        <View >
+        <View>
             <Card >
                 <Card.Title>{user.name}'s Profile</Card.Title>
                 <Image

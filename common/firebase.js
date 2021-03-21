@@ -60,8 +60,10 @@ export const databaseController = {
             .ref(`users/${userId}`)
             .once("value")
             .then(snapshot => {
-                if (!snapshot.child('distribution').exists())
+                if (!snapshot.child('distribution').exists()) {
+                    console.log("OVERWRITING DISTRIBUTION")
                     firebase.database().ref(`users/${userId}/distribution`).set(dist);
+                }
             });
     }
 };

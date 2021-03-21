@@ -1,13 +1,38 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import React, { useEffect, useState } from 'react';
 import { databaseController } from '../common/firebase';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { ListItem } from 'react-native-elements';
 
 const distributions = require('../common/distributions.json');
 
+
 const ChooseDistributionScreen = ({ route, navigation }) => {
-    console.log(distributions.data)
-    const { user } = route.params;
+    const userFromGoogle = route.params.user;
+    const [userState, setUserState] = useState({});
+
+
+    useEffect(() => {
+        const updateUserState = async () => {
+            const isReturningUser_ = await databaseController.isReturningUser(userFromGoogle.id);
+            const isUserDistributionSet_ = await databaseController.isUserDistributionSet(userFromGoogle.id);
+            const user_ = await databaseController.getUser(userFromGoogle.id);
+            setUserState({
+                isReturningUser: isReturningUser_,
+                isUserDistributionSet: isUserDistributionSet_,
+                user: user_
+            });
+            if (userState.isUserDistributionSet) {
+                navigation.navigate("Home", { user: userState.user });
+            }
+
+            if (!userState.isReturningUser && userState.isReturningUser !== undefined) {
+                console.log(userState.isReturningUser)
+                console.log("CREATED USER")
+                databaseController.createUser(userFromGoogle);
+            }
+        }
+        updateUserState();
+    })
 
     return (
         <View style={styles.container}>
@@ -19,8 +44,8 @@ const ChooseDistributionScreen = ({ route, navigation }) => {
                             key={i}
                             bottomDivider
                             onPress={() => {
-                                databaseController.setDistribution(d, user.id);
-                                navigation.navigate("Home", { user });
+                                databaseController.setDistribution(d, userFromGoogle.id);
+                                setUserState({ user: { d, ...userFromGoogle }, ...userState });
                             }}
                             ViewComponent={Text}
                             style={styles.listItem}
@@ -49,6 +74,5 @@ const styles = StyleSheet.create({
         alignSelf: 'stretch'
     }
 });
-
 
 export default ChooseDistributionScreen;
