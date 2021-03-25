@@ -10,6 +10,7 @@ import LoginScreen from './components/LoginScreen';
 import ProfileScreen from './components/ProfileScreen';
 import ChooseDistributionScreen from './components/ChooseDistributionScreen';
 import HomeScreen from './components/HomeScreen';
+import PlantScreen from './components/PlantScreen';
 
 const URLSchemes = AppAuth;
 
@@ -28,8 +29,9 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
-        <Stack.Screen name="ChooseDistribution" component={ChooseDistributionScreen} />
+        <Stack.Screen name="Choose Distribution" component={ChooseDistributionScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="View Plant" component={PlantScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

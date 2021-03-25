@@ -8,9 +8,14 @@ export default trefle = {
         let out = null;
         await fetch(`${baseUrl}/distributions/${distId}/plants?token=${TREFLE_KEY}&page=${page}`)
             .then(res => res.json())
-            .then(res => {
-                out = res;
-            });
+            .then(res => { out = res; });
+        return out;
+    },
+    fetchPlant: async (plantId) => {
+        let out = null;
+        await fetch(`${baseUrl}/plants/${plantId}?token=${TREFLE_KEY}`)
+            .then(res => res.json())
+            .then(res => { out = res; });
         return out;
     }
 }

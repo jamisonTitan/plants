@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, Button, StyleSheet, TouchableHighlight, ScrollView, ActivityIndicator } from 'react-native';
-import { databaseController } from '../common/firebase';
-import fetch from 'node-fetch';
+import { View, Text, StyleSheet, TouchableHighlight, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { Plant, AddMorePlants } from '../components/Plant';
 import trefle from '../common/trefle';
 const plantsOfCalifornia = require('../dummyData/plantSpeciesOfCalifornia.json');
@@ -12,12 +10,15 @@ const plant = plantsOfCalifornia.data[1];
 
 const HomeScreen = ({ route, navigation }) => {
     const [plantsState, setPlantsState] = useState({ currPage: 1, data: [] });
+    const [isLoadingPlants, setIsLoadingPlants] = useState(false)
     const { user } = route.params;
 
 
     useEffect(() => {
+        setIsLoadingPlants(true);
         trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage)
             .then(res => {
+                setIsLoadingPlants(false);
                 setPlantsState({ data: res.data, currPage: plantsState.currPage });
             });
 
@@ -31,27 +32,30 @@ const HomeScreen = ({ route, navigation }) => {
         navigation.navigate("Profile", { user });
     }
 
-    // const addMorePlantsHandler = useCallback(
-    //     () => {
-    //         trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
-    //             .then(res => {
-    //                 console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
-    //                 setPlantsState({ data: [...res.data], currPage: plantsState.currPage += 1 });
-    //             });
-    //         console.log('wtfuuuckkk!')
-    //     }
-    //     , []
-    // );
+    const addMorePlantsHandler = useCallback(
+        () => {
+            trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
+                .then(res => {
+                    console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
+                    setPlantsState({
+                        data: res.data ? ([...res.data, ...plantsState.data]) : plantsState.data,
+                        currPage: plantsState.currPage += 1
+                    });
+                });
+            console.log('wtfuuuckkk!')
+        }
+        , []
+    );
 
-    const addMorePlantsHandler = () => {
-        trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
-            .then(res => {
-                console.log('userdistid', user.distribution.id, 'currPage', plantsState.currPage)
-                console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
-                setPlantsState({ data: [...res.data], currPage: plantsState.currPage += 1 });
-            });
-        console.log('wtfuuuckkk!')
-    }
+    // const addMorePlantsHandler = () => {
+    //     trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
+    //         .then(res => {
+    //             console.log('userdistid', user.distribution.id, 'currPage', plantsState.currPage)
+    //             console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
+    //             setPlantsState({ data: [...res.data], currPage: plantsState.currPage += 1 });
+    //         });
+    //     console.log('wtfuuuckkk!')
+    // }
 
 
     return (
@@ -61,10 +65,27 @@ const HomeScreen = ({ route, navigation }) => {
                     {
                         plantsState.data?.length > 0 &&
                         plantsState.data.map((p, i) => (
-                            <Plant key={i} plant={p} />
+                            <TouchableOpacity
+                                key={i}
+                                onPress={() => {
+                                    console.log('navigating to plant');
+                                    trefle.fetchPlant(p.id)
+                                        .then(plant => {
+                                            console.log('plant' + plant)
+                                            navigation.navigate("View Plant", { user, plant })
+                                        });
+                                }}
+                            >
+                                <Plant plant={p} />
+                            </TouchableOpacity>
+
                         ))
                     }
-                    <AddMorePlants onPress={addMorePlantsHandler} />
+                    {
+                        isLoadingPlants ?
+                            <ActivityIndicator size='large' /> :
+                            <AddMorePlants onPress={addMorePlantsHandler} />
+                    }
                 </ScrollView>
 
             </View>

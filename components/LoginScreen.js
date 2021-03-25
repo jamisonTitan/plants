@@ -1,9 +1,7 @@
-import React from "react";
-import { StyleSheet, View, Button } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, View, Button, Text } from "react-native";
 import * as Google from "expo-google-app-auth";
-import { databaseController } from '../firebase';
-import { Card } from "react-native-elements";
-
+import { databaseController } from '../common/firebase';
 
 
 const IOS_CLIENT_ID = '171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.googleusercontent.com',
@@ -12,7 +10,9 @@ const IOS_CLIENT_ID = '171136312997-6jnaes8pg39lfnpn707gejc4lrktmd0i.apps.google
 
 
 const LoginScreen = ({ navigation }) => {
+    const [isLoggingIn, setIsLoggingIn] = useState(false);
     const signInAsync = async () => {
+        setIsLoggingIn(true);
         console.log("logging in");
         try {
             const { type, user } = await Google.logInAsync({
@@ -22,8 +22,20 @@ const LoginScreen = ({ navigation }) => {
             });
 
             if (type === "success") {
+                setIsLoggingIn(false);
                 console.log("success, navigating to profile:" + user.id);
-                navigation.navigate("ChooseDistribution", { user });
+                databaseController.isUserDistributionSet(user.id)
+                    .then(res => {
+                        if (res) {
+                            databaseController.getUser(user.id)
+                                .then(res => {
+                                    navigation.navigate("Home", { user: res });
+                                });
+                        } else {
+                            navigation.navigate("Choose Distribution", { user });
+                        }
+                    })
+
             }
         } catch (error) {
             console.log("error with login", error);
@@ -32,12 +44,19 @@ const LoginScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container} >
-            < View style={styles.buttonContainer}>
-                <Button
-                    color="#000"
-                    style={styles.button}
-                    title="Login with Google" onPress={signInAsync} />
-            </View >
+            {
+                isLoggingIn ?
+                    <View style={styles.buttonContainer} >
+                        <Text>Loading...</Text>
+                    </View>
+                    :
+                    < View style={styles.buttonContainer}>
+                        <Button
+                            color="#000"
+                            style={styles.button}
+                            title="Login with Google" onPress={signInAsync} />
+                    </View >
+            }
         </View>
     );
 };
@@ -47,6 +66,7 @@ const styles = StyleSheet.create({
         borderRadius: 0,
         margin: 0,
         marginTop: '50%',
+        alignItems: 'center'
     },
     container: {
         flex: 1,

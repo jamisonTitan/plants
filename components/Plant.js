@@ -2,18 +2,10 @@ import React, { useState } from 'react';
 import { TouchableHighlight } from 'react-native';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Card, Icon } from 'react-native-elements'
+import utils from '../common/utils';
+
 
 export const Plant = (plant) => {
-    const [found, setFound] = useState(false);
-
-    //used to change https -> http in image_urls
-    const remove_first_occurrence = (str, searchstr) => {
-        var index = str == null ? -1 : str.indexOf(searchstr);
-        if (index === -1) {
-            return str;
-        }
-        return str.slice(0, index) + str.slice(index + searchstr.length);
-    }
 
     return (
         <View>
@@ -22,7 +14,7 @@ export const Plant = (plant) => {
                     <Image
                         style={styles.avatar}
                         source={{
-                            uri: remove_first_occurrence(plant.plant.image_url, 's')
+                            uri: utils.removeFirstOccurrence(plant.plant.image_url, 's')
                         }}
                     />
                     <View style={styles.info}>
@@ -48,7 +40,7 @@ export const AddMorePlants = ({ onPress }) => {
                             raised
                             name='plus'
                             type='font-awesome'
-                            color='#f50'
+                            color='#000'
                         />
                     </View>
                 </Card>
