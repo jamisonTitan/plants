@@ -5,7 +5,7 @@ import { Plant, AddMorePlants } from '../components/Plant';
 import trefle from '../common/trefle';
 
 const HomeScreen = ({ route, navigation }) => {
-    const [plantsState, setPlantsState] = useState({ currPage: 1, data: [] });
+    const [plantsState, setPlantsState] = useState({ links: {}, data: [] });
     const [isLoadingPlants, setIsLoadingPlants] = useState(false)
     const [query, setQuery] = useState('');
     const { user } = route.params;
@@ -13,10 +13,12 @@ const HomeScreen = ({ route, navigation }) => {
 
     useEffect(() => {
         setIsLoadingPlants(true);
-        trefle.fetchPlantsByDistribution(user.distribution.id, plantsState.currPage)
+        trefle.fetchPlantsByDistribution(user.distribution.id)
             .then(res => {
                 setIsLoadingPlants(false);
-                setPlantsState({ data: res.data, currPage: plantsState.currPage });
+                const { data, links } = res;
+                setPlantsState({ data, links });
+                console.log("LINKSC", plantsState.links);
             });
 
     }, []);
@@ -25,28 +27,33 @@ const HomeScreen = ({ route, navigation }) => {
         navigation.navigate("Profile", { user });
     }
 
-    const handleAddMorePlants = useCallback(
-        () => {
-            trefle.fetchPlantsByQuery(user.distribution.id, query, plantsState.currPage += 1)
-                .then(res => {
-                    setPlantsState({
-                        data: res.data ? ([...res.data, ...plantsState.data]) : plantsState.data,
-                        currPage: plantsState.currPage += 1
-                    });
+    const handleAddMorePlants = () => {
+        console.log("Links before call1:", plantsState.links);
+        setIsLoadingPlants(true);
+        trefle.fetchPlantsByLink(plantsState.links.next)
+            .then(res => {
+                setIsLoadingPlants(false);
+                setPlantsState({
+                    data: res.data ? ([...res.data, ...plantsState.data]) : plantsState.data,
+                    links: res.links
                 });
-        }, []
-    );
+                console.log("LINKSB", res.links);
+            });
+
+    }
 
     const submitQuery = () => {
         setIsLoadingPlants(true);
-        trefle.fetchPlantsByQuery(user.distribution.id, query, 1)
+        console.log(query)
+        console.log("Links before call2:", plantsState.links);
+        trefle.fetchPlantsByQuery(query)
             .then(res => {
-                console.log("RES" + res)
                 setPlantsState({
                     data: res.data,
-                    currPage: 1
+                    links: res.links
                 });
                 setIsLoadingPlants(false);
+                console.log("LINKSA", res.links);
             })
     }
 
@@ -56,51 +63,47 @@ const HomeScreen = ({ route, navigation }) => {
                 <View style={styles.searchBarContainer}>
                     <SearchBar
                         placeholder="Search for a plant..."
-                        onChangeText={(q) => {
-                            setQuery(q);
-                            submitQuery();
-                        }}
+                        onChangeText={(q) => setQuery(q)}
+                        onSubmitEditing={() => submitQuery()}
                         value={query}
-                        containerStyle={{ backgroundColor: 'white' }}
+                        containerStyle={styles.searchBar}
                         inputContainerStyle={{ backgroundColor: 'white' }}
                     />
-                    <TouchableOpacity
-                        style={styles.submitQueryButton}
-                        onPress={submitQuery}
-                    >
-                        <Text>Submit</Text>
-                    </TouchableOpacity>
                 </View>
-                <ScrollView>
-                    {
-                        plantsState.data?.length > 0 &&
-                        plantsState.data.map((p, i) => (
-                            <TouchableOpacity
-                                key={i}
-                                onPress={() => {
-                                    console.log('navigating to plant');
-                                    trefle.fetchPlant(p.id)
-                                        .then(plant => {
-                                            console.log('plant' + plant)
-                                            navigation.navigate("View Plant", { user, plant })
-                                        });
-                                }}
-                            >
-                                <Plant plant={p} />
-                            </TouchableOpacity>
+                <View style={styles.plantsContainer}>
+                    <ScrollView >
+                        {
+                            plantsState.data?.length > 0 &&
+                            plantsState.data.map((p, i) => (
+                                <TouchableOpacity
+                                    key={i}
+                                    onPress={() => {
+                                        console.log('navigating to plant');
+                                        trefle.fetchPlant(p.id)
+                                            .then(plant => {
+                                                console.log('plant' + plant)
+                                                navigation.navigate("View Plant", { user, plant })
+                                            });
+                                    }}
+                                >
+                                    <Plant plant={p} />
+                                </TouchableOpacity>
 
-                        ))
-                    }
-                    {
-                        isLoadingPlants ?
-                            <Text style={styles.loadingText}>
-                                Loading Plants...
-                            </Text>
-                            :
-                            <AddMorePlants onPress={handleAddMorePlants} />
-                    }
-                </ScrollView>
+                            ))
+                        }
+                        {
+                            isLoadingPlants ?
+                                <Text style={styles.loadingText}>
+                                    Loading Plants...
+                            </Text> :
+                                (plantsState.links.first === plantsState.links.last) ||
+                                    (plantsState.links.self === plantsState.links.last) ?
+                                    <Text style={{ alignSelf: 'center' }}>No more results.</Text> :
+                                    <AddMorePlants onPress={handleAddMorePlants} />
 
+                        }
+                    </ScrollView>
+                </View>
             </View>
 
             <View style={styles.footer}>
@@ -140,9 +143,17 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 100
     },
+    searchBar: {
+        backgroundColor: '#fff',
+        borderBottomColor: 'transparent',
+        borderTopColor: 'transparent',
+    },
     searchBarContainer: {
         borderColor: 'white',
-        borderWidth: 0
+        borderWidth: 0,
+    },
+    plantsContainer: {
+        paddingBottom: 200
     }
 })
 
