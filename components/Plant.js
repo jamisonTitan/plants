@@ -18,7 +18,11 @@ export const Plant = (plant) => {
                         }}
                     />
                     <View style={styles.info}>
-                        <Card.Title>{plant.plant.common_name}</Card.Title>
+                        <Card.Title>{
+                            plant.plant.common_name ?
+                                plant.plant.common_name :
+                                plant.plant.scientific_name
+                        }</Card.Title>
                         <Text>Family: {plant.plant.family_common_name} </Text>
                         <Text>Genus: {plant.plant.genus}</Text>
                     </View>

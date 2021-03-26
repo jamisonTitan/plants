@@ -20,14 +20,14 @@ firebase.apps.length ? firebase.app() : firebase.initializeApp(firebaseConfig);
 
 export const databaseController = {
     createUser: (user) => {
-        firebase.database().ref(`users/${user.id}`).set(user);
+        firebase.database().ref(`users/${user.id}`).set({ ...user, found_plants: [] });
     },
     getUser: async (userId) => {
         let out = null;
         await firebase
             .database()
             .ref(`users/${userId}`)
-            .once("value", (data) => {
+            .once('value', (data) => {
                 out = data.val();
             });
         return out;
@@ -37,7 +37,7 @@ export const databaseController = {
         await firebase
             .database()
             .ref(`users/${userId}`)
-            .once("value")
+            .once('value')
             .then(snapshot => {
                 out = snapshot.exists();
             });
@@ -48,7 +48,7 @@ export const databaseController = {
         await firebase
             .database()
             .ref(`users/${userId}`)
-            .once("value")
+            .once('value')
             .then(snapshot => {
                 out = snapshot.child('distribution').exists();
             });
@@ -58,13 +58,61 @@ export const databaseController = {
         firebase
             .database()
             .ref(`users/${userId}`)
-            .once("value")
-            .then(snapshot => {
+            .once('value')
+            .then((snapshot) => {
                 if (!snapshot.child('distribution').exists()) {
                     console.log("OVERWRITING DISTRIBUTION")
                     firebase.database().ref(`users/${userId}/distribution`).set(dist);
                 }
             });
+    },
+    getIsPlantFound: async (userId, plantId) => {
+        let out = undefined;
+        await firebase
+            .database()
+            .ref(`users/${userId}/found_plants/${plantId}`)
+            .once('value')
+            .then((snapshot) => {
+                out = snapshot.exists();
+            });
+        return out;
+    },
+    addFoundPlant: async (userId, plant) => {
+        firebase
+            .database()
+            .ref(`users/${userId}/found_plants/${plant.data.id}`)
+            .set({
+                user_notes: '',
+                name: plant.data.common_name,
+                image_url: plant.data.image_url
+            });
+    },
+    removeFoundPlant: async (userId, plantId) => {
+        console.log("REMOVING PLANT")
+        firebase
+            .database()
+            .ref(`users/${userId}/found_plants/${plantId}`)
+            .remove();
+    },
+    setPlantUserNotes: async (userId, plantId, userNotes) => {
+        firebase
+            .database()
+            .ref(`users/${userId}/found_plants/${plantId}/user_notes`)
+            .set(userNotes);
+    },
+    getPlantUserNotes: async (userId, plantId) => {
+        let out = '';
+        await firebase
+            .database()
+            .ref(`users/${userId}/found_plants/${plantId}/user_notes`)
+            .once('value')
+            .then(snapshot => {
+                if (snapshot.exists()) {
+                    out = snapshot.val();
+                }
+            });
+        return out;
     }
+
 };
 

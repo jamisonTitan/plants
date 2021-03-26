@@ -1,22 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, ScrollView, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { SearchBar } from 'react-native-elements';
 import { Plant, AddMorePlants } from '../components/Plant';
 import trefle from '../common/trefle';
-const plantsOfCalifornia = require('../dummyData/plantSpeciesOfCalifornia.json');
-
-
-const plant = plantsOfCalifornia.data[1];
-
 
 const HomeScreen = ({ route, navigation }) => {
     const [plantsState, setPlantsState] = useState({ currPage: 1, data: [] });
     const [isLoadingPlants, setIsLoadingPlants] = useState(false)
+    const [query, setQuery] = useState('');
     const { user } = route.params;
 
 
     useEffect(() => {
         setIsLoadingPlants(true);
-        trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage)
+        trefle.fetchPlantsByDistribution(user.distribution.id, plantsState.currPage)
             .then(res => {
                 setIsLoadingPlants(false);
                 setPlantsState({ data: res.data, currPage: plantsState.currPage });
@@ -24,43 +21,56 @@ const HomeScreen = ({ route, navigation }) => {
 
     }, []);
 
-    useEffect(() => {
-        //TODO render new plants if needed
-    }, [plantsState])
-
     const navigateToProfile = () => {
         navigation.navigate("Profile", { user });
     }
 
-    const addMorePlantsHandler = useCallback(
+    const handleAddMorePlants = useCallback(
         () => {
-            trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
+            trefle.fetchPlantsByQuery(user.distribution.id, query, plantsState.currPage += 1)
                 .then(res => {
-                    console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
                     setPlantsState({
                         data: res.data ? ([...res.data, ...plantsState.data]) : plantsState.data,
                         currPage: plantsState.currPage += 1
                     });
                 });
-            console.log('wtfuuuckkk!')
-        }
-        , []
+        }, []
     );
 
-    // const addMorePlantsHandler = () => {
-    //     trefle.fetchPlantsInDistribution(user.distribution.id, plantsState.currPage += 1)
-    //         .then(res => {
-    //             console.log('userdistid', user.distribution.id, 'currPage', plantsState.currPage)
-    //             console.log(res.data + "RRRDDDDD" + plantsState.data + "PPPPPPDDDDDD");
-    //             setPlantsState({ data: [...res.data], currPage: plantsState.currPage += 1 });
-    //         });
-    //     console.log('wtfuuuckkk!')
-    // }
-
+    const submitQuery = () => {
+        setIsLoadingPlants(true);
+        trefle.fetchPlantsByQuery(user.distribution.id, query, 1)
+            .then(res => {
+                console.log("RES" + res)
+                setPlantsState({
+                    data: res.data,
+                    currPage: 1
+                });
+                setIsLoadingPlants(false);
+            })
+    }
 
     return (
         <View style={styles.container}>
             <View>
+                <View style={styles.searchBarContainer}>
+                    <SearchBar
+                        placeholder="Search for a plant..."
+                        onChangeText={(q) => {
+                            setQuery(q);
+                            submitQuery();
+                        }}
+                        value={query}
+                        containerStyle={{ backgroundColor: 'white' }}
+                        inputContainerStyle={{ backgroundColor: 'white' }}
+                    />
+                    <TouchableOpacity
+                        style={styles.submitQueryButton}
+                        onPress={submitQuery}
+                    >
+                        <Text>Submit</Text>
+                    </TouchableOpacity>
+                </View>
                 <ScrollView>
                     {
                         plantsState.data?.length > 0 &&
@@ -83,8 +93,11 @@ const HomeScreen = ({ route, navigation }) => {
                     }
                     {
                         isLoadingPlants ?
-                            <ActivityIndicator size='large' /> :
-                            <AddMorePlants onPress={addMorePlantsHandler} />
+                            <Text style={styles.loadingText}>
+                                Loading Plants...
+                            </Text>
+                            :
+                            <AddMorePlants onPress={handleAddMorePlants} />
                     }
                 </ScrollView>
 
@@ -110,13 +123,12 @@ const HomeScreen = ({ route, navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#F5E9A4',
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'flex-start'
     },
     footer: {
-        backgroundColor: '#228056',
+        backgroundColor: '#aaa',
         position: 'absolute',
         height: 40,
         width: '100%',
@@ -124,12 +136,13 @@ const styles = StyleSheet.create({
         bottom: 0,
         alignSelf: 'stretch'
     },
-    button: {
-        borderRadius: 50,
-        width: '80%',
-        backgroundColor: '#fff',
-        padding: 10,
-        alignItems: 'center',
+    loadingText: {
+        alignSelf: 'center',
+        marginTop: 100
+    },
+    searchBarContainer: {
+        borderColor: 'white',
+        borderWidth: 0
     }
 })
 

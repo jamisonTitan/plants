@@ -8,32 +8,56 @@ import trefle from '../common/trefle';
 
 const PlantScreen = ({ navigation, route }) => {
     const { plant, user } = route.params;
-    const [userNotesFormState, setuserNotesFormState] = useState({
+    const [userNotesFormState, setUserNotesFormState] = useState({
         isEditing: false,
-        textInput: ''
+        userNotes: ''
     });
-    const [isFound, setIsFound] = useState(false);
+    const [isFound, setIsFound] = useState(undefined);
 
     useEffect(() => {
-        //TODO get is found from db
+        databaseController
+            .getIsPlantFound(user.id, plant.data.id)
+            .then(res => {
+                setIsFound(res);
+            });
+        databaseController
+            .getPlantUserNotes(user.id, plant.data.id)
+            .then(res => {
+                console.log(res)
+                //Weird workaround to fix an issue with usernotes not rendering
+                setUserNotesFormState({ isEditing: true, userNotes: res });
+                setUserNotesFormState({ isEditing: false, userNotes: res });
+            });
     }, []);
+
+
+    const handleIsFoundToggle = (isFound) => {
+        console.log("ISFOUND" + isFound);
+        setIsFound(isFound);
+        if (isFound) {
+            databaseController.addFoundPlant(user.id, plant);
+        } else {
+            databaseController.removeFoundPlant(user.id, plant.data.id);
+            setUserNotesFormState({ ...userNotesFormState, userNotes: '' })
+        }
+    }
 
     return (
         <View style={styles.container}>
-            <View style={styles.mainContentContainer} >
+            <View style={styles.mainsecondaryContentContainer} >
                 <Image
                     style={styles.avatar}
                     source={{
                         uri: utils.removeFirstOccurrence(plant.data.image_url, 's')
                     }} />
-                <View style={styles.mainContentTextContainer}>
+                <View style={styles.mainsecondaryContentTextContainer}>
                     <Text style={[styles.bold, styles.text]}>{plant.data.common_name}</Text>
                     <Text style={[styles.italic, styles.text]}>{plant.data.scientific_name} </Text>
                     <View style={styles.checkboxContainer} >
                         <CheckBox
                             disabled={false}
                             value={isFound}
-                            onValueChange={(val) => setIsFound(val)}
+                            onValueChange={(val) => handleIsFoundToggle(val)}
                         />
                         <View>
                             <Text style={[styles.checkboxLabel, styles.text]}>Found</Text>
@@ -42,8 +66,8 @@ const PlantScreen = ({ navigation, route }) => {
                 </View>
             </View>
             <Divider />
-            <View style={styles.contentContainer}>
-                <View style={styles.contentTextContainer}>
+            <View style={styles.secondaryContentContainer}>
+                <View style={styles.secondaryContentTextContainer}>
                     <Text style={styles.secondaryText}>
                         Genus: {plant.data.main_species.genus}
                     </Text>
@@ -53,48 +77,55 @@ const PlantScreen = ({ navigation, route }) => {
                         ({plant.data.main_species.family})
                     </Text>
                 </View>
-                <View style={styles.userNotesContainer}>
-                    <Card>
-                        <View style={styles.userNotesControlPanelContainer}>
-                            <Text style={styles.secondaryText}>
-                                Notes
-                            </Text>
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => {
-                                    setuserNotesFormState({ ...userNotesFormState, isEditing: !userNotesFormState.isEditing });
-                                }}
-                            >
-                                <Text style={styles.secondaryText}>
-                                    {
-                                        userNotesFormState.isEditing ?
-                                            'save' :
-                                            'edit'
-                                    }
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
-                        {
-                            userNotesFormState.isEditing ?
-                                <TextInput
-                                    style={styles.textInput}
-                                    value={userNotesFormState.textInput}
-                                    onChangeText={(val) => setuserNotesFormState({ ...userNotesFormState, textInput: val })}
-                                    multiline={true}
-                                    numberOfLines={3}
-                                /> :
+                <View style={[styles.userNotesContainer, isFound ? {} : styles.disabled]}>
 
-                                <View style={styles.userNotesTextContainer}>
-                                    {
-                                        userNotesFormState.textInput === '' ?
-                                            <Text style={[styles.secondaryText, styles.greyText]}>
-                                                You have not written anything yet.
-                                </Text> :
-                                            <Text style={styles.secondaryText}>{userNotesFormState.textInput}</Text>
-                                    }
-                                </View>
-                        }
-                    </Card>
+                    <View style={styles.userNotesControlPanelContainer}>
+                        <Text style={[styles.secondaryText, styles.bold]}>
+                            Notes
+                            </Text>
+                        <TouchableOpacity
+                            disabled={!isFound}
+                            style={styles.userNotesButton}
+                            onPress={() => {
+                                if (isFound) {
+                                    setUserNotesFormState({ ...userNotesFormState, isEditing: !userNotesFormState.isEditing });
+                                }
+                                if (userNotesFormState.isEditing) {
+                                    databaseController.setPlantUserNotes(user.id, plant.data.id, userNotesFormState.userNotes);
+                                }
+                            }}
+                        >
+                            <Text style={styles.secondaryText}>
+                                {
+                                    userNotesFormState.isEditing ?
+                                        'save' :
+                                        'edit'
+                                }
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                    {
+                        userNotesFormState.isEditing ?
+                            <TextInput
+                                style={styles.userNotes}
+                                value={userNotesFormState.userNotes}
+                                onChangeText={(val) => setUserNotesFormState({ ...userNotesFormState, userNotes: val })}
+                                multiline={true}
+                                numberOfLines={3}
+                            /> :
+
+                            <View style={styles.userNotesTextContainer}>
+                                {
+                                    userNotesFormState.userNotes === '' ?
+                                        <Text style={[styles.secondaryText, styles.greyText]}>
+                                            {isFound ?
+                                                'You have not written anything yet.' :
+                                                'You can only write notes once you have found this plant.'}
+                                        </Text> :
+                                        <Text style={styles.secondaryText}>{userNotesFormState.userNotes}</Text>
+                                }
+                            </View>
+                    }
                 </View>
             </View>
         </View >
@@ -121,12 +152,12 @@ const styles = StyleSheet.create({
     italic: {
         fontStyle: 'italic'
     },
-    mainContentContainer: {
+    mainsecondaryContentContainer: {
         margin: 10,
         flexDirection: 'row',
         justifyContent: 'flex-start',
     },
-    mainContentTextContainer: {
+    mainsecondaryContentTextContainer: {
         marginLeft: 20,
     },
     checkboxContainer: {
@@ -143,30 +174,32 @@ const styles = StyleSheet.create({
         width: 150,
         borderRadius: 100
     },
-    contentContainer: {
+    secondaryContentContainer: {
         marginTop: 20,
         //  backgroundColor: 'blue'
     },
-    contentTextContainer: {
+    secondaryContentTextContainer: {
         marginLeft: 20
     },
-    textInput: {
+    userNotes: {
         borderColor: '#000',
         borderWidth: 0.6,
-        width: '100%'
+        width: '100%',
+
+    },
+    disabled: {
+        backgroundColor: '#ddd',
     },
     userNotesContainer: {
         minHeight: 50,
-        //alignSelf: 'center',
         margin: 20,
-        marginLeft: 0,
-        width: '100%',
+        padding: 10
     },
     userNotesControlPanelContainer: {
         flexDirection: 'row',
         height: 30
     },
-    button: {
+    userNotesButton: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'grey',
