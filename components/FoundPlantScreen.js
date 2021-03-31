@@ -1,28 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ImageBackground } from 'react-native';
-import { Card, Icon, Divider, } from 'react-native-elements'
+import { Card, Icon, Divider } from 'react-native-elements'
 import utils from '../common/utils';
-import CheckBox from '@react-native-community/checkbox';
 import { databaseController } from '../common/firebase';
-import trefle from '../common/trefle';
 import { AntDesign } from '@expo/vector-icons';
+import trefle from '../common/trefle';
 
-const PlantScreen = ({ navigation, route }) => {
-    const { plant, user } = route.params;
+const FoundPlantScreen = ({ navigation, route }) => {
+    const { plant, user, dateFound } = route.params;
     const [userNotesFormState, setUserNotesFormState] = useState({
         isEditing: false,
         userNotes: ''
     });
-    const [isFound, setIsFound] = useState(undefined);
 
     useEffect(() => {
         databaseController
-            .getIsPlantFound(user.id, plant.data.id)
-            .then(res => {
-                setIsFound(res);
-            });
-        databaseController
-            .getPlantUserNotes(user.id, plant.data.id)
+            .getPlantUserNotes(user.id, plant.data?.id)
             .then(res => {
                 console.log(res)
                 //Weird workaround to fix an issue with usernotes not rendering
@@ -31,27 +24,16 @@ const PlantScreen = ({ navigation, route }) => {
             });
     }, []);
 
-
-    const handleIsFoundToggle = (isFound) => {
-        console.log("ISFOUND" + isFound);
-        setIsFound(isFound);
-        if (isFound) {
-            databaseController.addFoundPlant(user.id, plant);
-        } else {
-            databaseController.removeFoundPlant(user.id, plant.data.id);
-            setUserNotesFormState({ ...userNotesFormState, userNotes: '' })
-        }
-    }
-
     return (
         <View style={styles.container}>
             <ImageBackground
                 source={require('../common/paper.png')}
                 style={styles.imgBkg}
             >
+
                 <TouchableOpacity
                     style={styles.backButton}
-                    onPress={() => navigation.navigate("Home", { user })}
+                    onPress={() => navigation.navigate("Found Plants", { user })}
                 >
                     <AntDesign name="back" size={24} color="black" />
                     <Text style={[styles.backButtonLabel, styles.secondaryText, styles.bold, styles.greyText]}>Back</Text>
@@ -60,53 +42,45 @@ const PlantScreen = ({ navigation, route }) => {
                     <Image
                         style={styles.avatar}
                         source={{
-                            uri: utils.removeFirstOccurrence(plant.data.image_url, 's')
+                            //TODO add user pic
+                            uri: utils.removeFirstOccurrence(plant.data?.image_url, 's')
                         }} />
                     <View style={styles.mainsecondaryContentTextContainer}>
                         <Text style={[styles.bold, styles.text]}>{
-                            plant.data.common_name ?
-                                plant.data.common_name :
-                                plant.data.scientific_name}</Text>
-                        <Text style={[styles.italic, styles.text]}>{plant.data.scientific_name} </Text>
-                        <View style={styles.checkboxContainer} >
-                            <CheckBox
-                                disabled={false}
-                                value={isFound}
-                                onValueChange={(val) => handleIsFoundToggle(val)}
-                            />
-                            <View>
-                                <Text style={[styles.checkboxLabel, styles.text]}>Found</Text>
-                            </View>
-                        </View>
+                            plant.data?.common_name ?
+                                plant.data?.common_name :
+                                plant.data?.scientific_name
+                        }</Text>
+                        <Text style={[styles.italic, styles.text]}>{plant.data?.scientific_name} </Text>
+                        <Text style={[styles.greyText, styles.text]}>Found on:</Text>
+                        <Text style={[styles.greyText, styles.text]}>{dateFound.date}</Text>
+                        <Text style={[styles.greyText, styles.text]}>{dateFound.time}</Text>
                     </View>
                 </View>
                 <Divider />
                 <View style={styles.secondaryContentContainer}>
                     <View style={styles.secondaryContentTextContainer}>
                         <Text style={styles.secondaryText}>
-                            Genus: {plant.data.main_species.genus}
+                            Genus: {plant.data?.main_species.genus}
                         </Text>
                         <Text style={styles.secondaryText}>
                             Family:
-                        {plant.data.main_species.family_common_name}
-                        ({plant.data.main_species.family})
+                        {plant.data?.main_species.family_common_name}
+                        ({plant.data?.main_species.family})
                     </Text>
                     </View>
-                    <View style={[styles.userNotesContainer, isFound ? {} : styles.disabled]}>
+                    <View style={styles.userNotesContainer}>
 
                         <View style={styles.userNotesControlPanelContainer}>
                             <Text style={[styles.secondaryText, styles.bold]}>
                                 Notes
                             </Text>
                             <TouchableOpacity
-                                disabled={!isFound}
                                 style={styles.userNotesButton}
                                 onPress={() => {
-                                    if (isFound) {
-                                        setUserNotesFormState({ ...userNotesFormState, isEditing: !userNotesFormState.isEditing });
-                                    }
+                                    setUserNotesFormState({ ...userNotesFormState, isEditing: !userNotesFormState.isEditing });
                                     if (userNotesFormState.isEditing) {
-                                        databaseController.setPlantUserNotes(user.id, plant.data.id, userNotesFormState.userNotes);
+                                        databaseController.setPlantUserNotes(user.id, plant.data?.id, userNotesFormState.userNotes);
                                     }
                                 }}
                             >
@@ -133,22 +107,21 @@ const PlantScreen = ({ navigation, route }) => {
                                     {
                                         userNotesFormState.userNotes === '' ?
                                             <Text style={[styles.secondaryText, styles.greyText]}>
-                                                {isFound ?
-                                                    'You have not written anything yet.' :
-                                                    'You can only write notes once you have found this plant.'}
-                                            </Text> :
+                                                You have not written anything yet.
+                                        </Text> :
                                             <Text style={styles.secondaryText}>{userNotesFormState.userNotes}</Text>
                                     }
                                 </View>
                         }
                     </View>
+
                 </View>
-            </ImageBackground>
+            </ImageBackground >
         </View >
     )
 }
 
-export default PlantScreen;
+export default FoundPlantScreen;
 
 const styles = StyleSheet.create({
     imgBkg: {
@@ -191,15 +164,6 @@ const styles = StyleSheet.create({
     },
     mainsecondaryContentTextContainer: {
         marginLeft: 20,
-    },
-    checkboxContainer: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        marginLeft: -8
-    },
-    checkboxLabel: {
-        marginLeft: 10
     },
     avatar: {
         height: 150,

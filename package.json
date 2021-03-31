@@ -10,6 +10,8 @@
   "dependencies": {
     "@apollo/client": "^3.3.8",
     "@babel/runtime": "^7.13.10",
+    "@expo-google-fonts/alice": "^0.1.0",
+    "@expo-google-fonts/inter": "^0.1.0",
     "@react-native-community/checkbox": "^0.5.7",
     "@react-native-community/google-signin": "^5.0.0",
     "@react-native-community/masked-view": "^0.1.10",
@@ -18,6 +20,7 @@
     "bcryptjs": "^2.4.3",
     "expo": "~40.0.0",
     "expo-app-auth": "~9.3.0",
+    "expo-font": "~8.4.0",
     "expo-google-app-auth": "^8.1.4",
     "expo-google-sign-in": "~8.4.0",
     "expo-status-bar": "~1.0.3",

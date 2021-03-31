@@ -1,3 +1,5 @@
+import utils from '../common/utils';
+
 const firebase = require('firebase');
 
 //TODO move firebase config vars to a .env file
@@ -16,7 +18,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.apps.length ? firebase.app() : firebase.initializeApp(firebaseConfig);
-
 
 export const databaseController = {
     createUser: (user) => {
@@ -82,8 +83,10 @@ export const databaseController = {
             .database()
             .ref(`users/${userId}/found_plants/${plant.data.id}`)
             .set({
+                date_found: utils.now(),
+                slug: plant.data.slug,
                 user_notes: '',
-                name: plant.data.common_name,
+                name: plant.data.common_name ? plant.data.common_name : plant.data.scientific_name,
                 image_url: plant.data.image_url
             });
     },
@@ -112,7 +115,17 @@ export const databaseController = {
                 }
             });
         return out;
-    }
-
+    },
+    getFoundPlants: async (userId) => {
+        let out = null;
+        await firebase
+            .database()
+            .ref(`users/${userId}/found_plants`)
+            .once('value')
+            .then(snapshot => {
+                out = snapshot.val();
+            });
+        return out;
+    },
 };
 

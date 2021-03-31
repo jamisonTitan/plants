@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { AppRegistry } from 'react-native';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -11,17 +10,13 @@ import ProfileScreen from './components/ProfileScreen';
 import ChooseDistributionScreen from './components/ChooseDistributionScreen';
 import HomeScreen from './components/HomeScreen';
 import PlantScreen from './components/PlantScreen';
-
-const URLSchemes = AppAuth;
+import FoundPlantsScreen from './components/FoundPlantsScreen';
+import FoundPlantScreen from './components/FoundPlantScreen';
 
 const Stack = createStackNavigator();
-
-// Optionally import the services that ou want to use
-//import "firebase/auth";
-//import "firebase/database";
-//import "firebase/firestore";
-//import "firebase/storage";
-
+Stack.Navigator.defaultProps = {
+  headerMode: 'none',
+};
 
 export default function App() {
   return (
@@ -32,18 +27,11 @@ export default function App() {
         <Stack.Screen name="Choose Distribution" component={ChooseDistributionScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="View Plant" component={PlantScreen} />
+        <Stack.Screen name="Found Plants" component={FoundPlantsScreen} />
+        <Stack.Screen name="View Found Plant" component={FoundPlantScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#4b8b3b',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 AppRegistry.registerComponent('MyApplication', () => App);
